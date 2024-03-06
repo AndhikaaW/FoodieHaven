@@ -13,9 +13,6 @@
         android:theme="@style/Theme.FoodieHaven"
         tools:targetApi="31">
         <activity
-            android:name=".LirikLagu"
-            android:exported="false" />
-        <activity
             android:name=".Login"
             android:exported="true">
             <intent-filter>
@@ -26,7 +23,8 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false"></activity>
+            android:exported="false">
+        </activity>
         <activity
             android:name=".register"
             android:exported="false" />

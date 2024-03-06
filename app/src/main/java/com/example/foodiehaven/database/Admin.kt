@@ -9,6 +9,8 @@ data class Admin (
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0,
     @ColumnInfo
+    var email: String,
+    @ColumnInfo
     var username: String,
     @ColumnInfo
     var password: String

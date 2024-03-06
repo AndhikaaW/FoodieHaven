@@ -54,14 +54,15 @@
                 app:boxBackgroundMode="outline"
                 android:layout_marginBottom="20dp">
 
+
                 <EditText
-                    android:id="@+id/input_email"
+                    android:id="@+id/input_username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
+                    android:inputType="text"
                     android:fontFamily="monospace"
                     android:textSize="12sp"
-                    android:hint="Email "/>
+                    android:hint="Username "/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -118,4 +119,5 @@
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
 </RelativeLayout>
