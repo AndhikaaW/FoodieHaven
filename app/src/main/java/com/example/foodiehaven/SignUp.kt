@@ -3,7 +3,6 @@ package com.example.foodiehaven
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.ContactsContract.CommonDataKinds.Email
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -14,11 +13,11 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class register : AppCompatActivity() {
+class SignUp : AppCompatActivity() {
     lateinit var btn_SignIn: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register)
+        setContentView(R.layout.activity_signup)
         btn_SignIn = findViewById(R.id.btn_sign_in)
 
         btn_SignIn.setOnClickListener {
@@ -32,7 +31,7 @@ class register : AppCompatActivity() {
         val username = findViewById<EditText>(R.id.input_username)
         val password = findViewById<EditText>(R.id.input_password)
         CoroutineScope(Dispatchers.IO).launch {
-            AdminApp(this@register).getAdminDao().addAdmin(
+            AdminApp(this@SignUp).getAdminDao().addAdmin(
                 Admin(0, email.text.toString(), username.text.toString(), password.text.toString())
             )
         }

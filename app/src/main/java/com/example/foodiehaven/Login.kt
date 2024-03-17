@@ -7,9 +7,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
-import androidx.navigation.findNavController
-import com.example.foodiehaven.database.Admin
 import com.example.foodiehaven.database.AdminApp
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -21,7 +18,6 @@ class Login : AppCompatActivity() {
     lateinit var textResgist: TextView
     lateinit var username: EditText
     lateinit var password: EditText
-    private lateinit var database: AdminApp
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,7 +36,7 @@ class Login : AppCompatActivity() {
             }
         }
         textResgist.setOnClickListener {
-            startActivity(Intent(this, register::class.java))
+            startActivity(Intent(this, SignUp::class.java))
             finish()
         }
     }
@@ -48,14 +44,14 @@ class Login : AppCompatActivity() {
     private fun prosesLogin(){
         val username = findViewById<EditText>(R.id.input_username)
         val password = findViewById<EditText>(R.id.input_password)
-        val navController = findNavController(R.id.nav_host_fragment)
 
         CoroutineScope(Dispatchers.IO).launch {
             val admin = AdminApp(this@Login).getAdminDao().findUserByUsernameAndPassword(username.text.toString(),password.text.toString())
             withContext(Dispatchers.Main) {
                 if (admin != null && admin.password == password.text.toString()) {
-                    navController.navigate(R.id.fragment_home)
-                    Toast.makeText(this@Login, "Login berhasil", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this@Login, MainActivity::class.java)
+                    startActivity(intent)
+                    finish()
                 } else {
                     Toast.makeText(this@Login, "Username atau password salah", Toast.LENGTH_SHORT).show()
                 }
