@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
-    app:cardBackgroundColor="#a3a3a3"
+    app:cardBackgroundColor="#ffd0ffdb"
     app:cardCornerRadius="10dp"
     app:cardElevation="5dp">
 
@@ -16,8 +16,8 @@
             android:id="@+id/paketIcon"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_margin="5dp"
-            android:src="@drawable/logo" />
+            android:layout_margin="15dp"
+            android:src="@drawable/home" />
 
         <TextView
             android:id="@+id/namaPaket"
@@ -25,9 +25,12 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/paketIcon"
             android:layout_centerInParent="true"
-            android:layout_margin="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
             android:gravity="center"
-            android:text="Complete Package"
+            android:text="example"
             android:textColor="@android:color/black"
             android:textSize="14sp"
             android:textStyle="bold" />

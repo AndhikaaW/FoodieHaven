@@ -1,14 +1,17 @@
 package com.example.foodiehaven.adapter
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.foodiehaven.Order
 import com.example.foodiehaven.R
 
-class MenuAdapter (private val data: ArrayList<MenuMakanan>) : RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
+class MenuAdapter (private val context: Context, private val data: ArrayList<MenuMakanan>) : RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
 
     class MenuViewHolder(inflater: LayoutInflater,parent:ViewGroup): RecyclerView.ViewHolder(inflater.inflate(
         R.layout.adapter_menu,parent,false)){
@@ -37,6 +40,12 @@ class MenuAdapter (private val data: ArrayList<MenuMakanan>) : RecyclerView.Adap
 
     override fun onBindViewHolder(holder: MenuViewHolder, position: Int) {
         holder.bind(data[position])
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, Order::class.java)
+
+            intent.putExtra("namaPaket", data[position].namaPaket)
+            context.startActivity(intent)
+        }
     }
 
     data class MenuMakanan(val paketIcon: Int, val namaPaket: String)
