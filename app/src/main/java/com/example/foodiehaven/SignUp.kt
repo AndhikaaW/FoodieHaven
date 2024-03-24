@@ -21,7 +21,7 @@ class SignUp : AppCompatActivity() {
         btn_SignIn = findViewById(R.id.btn_sign_in)
 
         btn_SignIn.setOnClickListener {
-            startActivity(Intent(this, Login::class.java))
+            startActivity(Intent(this@SignUp, Login::class.java))
             finish()
         }
         setupListener()
@@ -48,7 +48,7 @@ class SignUp : AppCompatActivity() {
                 val showDialog = AlertDialog.Builder(this)
                 showDialog.setMessage("Success!")
                 showDialog.setPositiveButton("OK") { dialog, id ->
-                    startActivity(Intent(this, Login::class.java))
+                    startActivity(Intent(this@SignUp, Login::class.java))
                     finish()
                 }
                 showDialog.show()

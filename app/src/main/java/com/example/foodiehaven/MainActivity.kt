@@ -1,15 +1,18 @@
 package com.example.foodiehaven
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.foodiehaven.adapter.CartAdapter
 import com.example.foodiehaven.adapter.MenuAdapter
+import com.example.foodiehaven.database.Menu
 import com.example.foodiehaven.database.MenuApp
 import com.example.foodiehaven.database.MenuDao
 import com.example.foodiehaven.databinding.ActivityMainBinding
@@ -24,6 +27,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var adapter: MenuAdapter
     lateinit var dao: MenuDao
     lateinit var cartAdapter: CartAdapter
+    lateinit var btnlogout: ImageView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        btnlogout = findViewById(R.id.btn_logout)
         recyclerView = findViewById(R.id.menuPaket)
 
         dao = MenuApp.invoke(this@MainActivity).getMenuDao()
@@ -41,14 +46,22 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
 
         setupRecycleView()
+
+        btnlogout.setOnClickListener {
+            startActivity(Intent(this@MainActivity, Login::class.java))
+            finish()
+        }
     }
 
     override fun onStart() {
         super.onStart()
-        CoroutineScope(Dispatchers.IO).launch {
+        loadData()
+    }
+    fun loadData (){
+        CoroutineScope(Dispatchers.Main).launch {
             val menu = dao.getAllMenu()
             Log.d("MainActivity", "dbResponse: $menu")
-            withContext(Dispatchers.IO) {
+            withContext(Dispatchers.Main) {
                 cartAdapter.setData(menu)
             }
         }
@@ -65,8 +78,23 @@ class MainActivity : AppCompatActivity() {
 
     }
     fun setupRecycleView(){
+
         val list: RecyclerView? = findViewById(R.id.listKeranjang)
-        cartAdapter = CartAdapter(arrayListOf())
+
+        cartAdapter = CartAdapter(arrayListOf(), object : CartAdapter.OnAdapterListener {
+            override fun onClick(cart: Menu) {
+//                startActivity(Intent(this@MainActivity, Order::class.java))
+//                finish()
+            }
+            override fun onDelete(cart: Menu) {
+                CoroutineScope(Dispatchers.Main).launch {
+                    dao.deleteMenu(cart)
+                    withContext(Dispatchers.Main) {
+                        loadData()
+                    }
+                }
+            }
+        })
 
         list?.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)

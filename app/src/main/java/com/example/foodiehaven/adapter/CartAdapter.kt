@@ -10,11 +10,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.foodiehaven.R
 import com.example.foodiehaven.database.Menu
 
-class CartAdapter(private val menu: ArrayList<Menu>) : RecyclerView.Adapter<CartAdapter.CartViewHolder>(){
+class CartAdapter(private val menu: ArrayList<Menu>,private val listener: OnAdapterListener) : RecyclerView.Adapter<CartAdapter.CartViewHolder>(){
     class CartViewHolder(view: View) : RecyclerView.ViewHolder(view){
         val pelanggan: TextView = view.findViewById(R.id.pelanggan)
         val telepon: TextView = view.findViewById(R.id.telepon)
         val icon_delete: ImageView = view.findViewById(R.id.icon_delete)
+        val icon_done: ImageView = view.findViewById(R.id.icon_done)
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartViewHolder {
         return CartViewHolder(
@@ -26,12 +27,15 @@ class CartAdapter(private val menu: ArrayList<Menu>) : RecyclerView.Adapter<Cart
     override fun onBindViewHolder(holder: CartViewHolder, position: Int) {
         val cart = menu[position]
         holder.pelanggan.text = cart.namaPelanggan
-//        holder.pelanggan.setOnClickListener {
-//            listener.onClick(cart)
-//        }
+        holder.pelanggan.setOnClickListener {
+            listener.onClick(cart)
+        }
         holder.telepon.text = cart.noTelepon
         holder.icon_delete
-
+        holder.icon_delete.setOnClickListener {
+            listener.onDelete(cart)
+        }
+        holder.icon_done
     }
     fun setData(list: List<Menu>){
         menu.clear()
@@ -40,5 +44,6 @@ class CartAdapter(private val menu: ArrayList<Menu>) : RecyclerView.Adapter<Cart
     }
     interface OnAdapterListener{
         fun onClick(cart : Menu)
+        fun onDelete(cart: Menu)
     }
 }
