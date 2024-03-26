@@ -1,5 +1,7 @@
 package com.example.foodiehaven.adapter
 
+import android.content.Context
+import android.content.Intent
 import android.text.method.TextKeyListener.clear
 import android.view.LayoutInflater
 import android.view.View
@@ -7,10 +9,11 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.foodiehaven.OrderView
 import com.example.foodiehaven.R
 import com.example.foodiehaven.database.Menu
 
-class CartAdapter(private val menu: ArrayList<Menu>,private val listener: OnAdapterListener) : RecyclerView.Adapter<CartAdapter.CartViewHolder>(){
+class CartAdapter(private val context: Context, private val menu: ArrayList<Menu>, private val listener: OnAdapterListener) : RecyclerView.Adapter<CartAdapter.CartViewHolder>(){
     class CartViewHolder(view: View) : RecyclerView.ViewHolder(view){
         val pelanggan: TextView = view.findViewById(R.id.pelanggan)
         val telepon: TextView = view.findViewById(R.id.telepon)
@@ -29,6 +32,12 @@ class CartAdapter(private val menu: ArrayList<Menu>,private val listener: OnAdap
         holder.pelanggan.text = cart.namaPelanggan
         holder.pelanggan.setOnClickListener {
             listener.onClick(cart)
+            val intent = Intent(context, OrderView::class.java)
+
+            intent.putExtra("namaPelanggan", menu[position].namaPelanggan)
+            intent.putExtra("alamatRumah", menu[position].alamatRumah)
+            intent.putExtra("noTelepon", menu[position].noTelepon)
+            context.startActivity(intent)
         }
         holder.telepon.text = cart.noTelepon
         holder.icon_delete

@@ -1,12 +1,12 @@
 package com.example.foodiehaven
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
-import androidx.core.content.ContentProviderCompat.requireContext
+import android.widget.Toast
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var dao: MenuDao
     lateinit var cartAdapter: CartAdapter
     lateinit var btnlogout: ImageView
+    lateinit var btnHistory: CardView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,6 +38,7 @@ class MainActivity : AppCompatActivity() {
 
         btnlogout = findViewById(R.id.btn_logout)
         recyclerView = findViewById(R.id.menuPaket)
+        btnHistory = findViewById(R.id.History)
 
         dao = MenuApp.invoke(this@MainActivity).getMenuDao()
 
@@ -50,6 +52,9 @@ class MainActivity : AppCompatActivity() {
         btnlogout.setOnClickListener {
             startActivity(Intent(this@MainActivity, Login::class.java))
             finish()
+        }
+        btnHistory.setOnClickListener{
+            startActivity(Intent(this@MainActivity, Login::class.java))
         }
     }
 
@@ -81,10 +86,9 @@ class MainActivity : AppCompatActivity() {
 
         val list: RecyclerView? = findViewById(R.id.listKeranjang)
 
-        cartAdapter = CartAdapter(arrayListOf(), object : CartAdapter.OnAdapterListener {
+        cartAdapter = CartAdapter(this, arrayListOf(), object : CartAdapter.OnAdapterListener {
             override fun onClick(cart: Menu) {
-//                startActivity(Intent(this@MainActivity, Order::class.java))
-//                finish()
+                Toast.makeText(this@MainActivity, "loading", Toast.LENGTH_SHORT).show()
             }
             override fun onDelete(cart: Menu) {
                 CoroutineScope(Dispatchers.Main).launch {

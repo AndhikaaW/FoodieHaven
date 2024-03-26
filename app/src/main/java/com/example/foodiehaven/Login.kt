@@ -37,7 +37,6 @@ class Login : AppCompatActivity() {
         }
         textResgist.setOnClickListener {
             startActivity(Intent(this, SignUp::class.java))
-            finish()
         }
     }
 

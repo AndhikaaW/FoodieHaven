@@ -13,6 +13,8 @@ data class Menu (
     @ColumnInfo
     var noTelepon: String,
     @ColumnInfo
+    var alamatRumah: String,
+    @ColumnInfo
     var namaMenu: String,
     @ColumnInfo
     var kuantitas: String,
