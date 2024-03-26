@@ -1,6 +1,7 @@
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
@@ -8,56 +9,40 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.foodiehaven.OrderAct
 import com.example.foodiehaven.R
+import com.example.foodiehaven.adapter.CartAdapter
+import com.example.foodiehaven.database.Menu
+import com.example.foodiehaven.database.Paket
 
-class OrderAdapter (private val context: Context, private val data: ArrayList<ListMenuMakanan>,private val listener: OnClickListener) : RecyclerView.Adapter<OrderAdapter.ListMenuViewHolder>() {
-    class ListMenuViewHolder(inflater: LayoutInflater, parent: ViewGroup) : RecyclerView.ViewHolder(
-        inflater.inflate(
-            R.layout.adapter_list_menu, parent, false
-        )
-    ) {
-
-        private var listIcon: ImageView? = null
-        private var listMenu: TextView? = null
-        private var listHarga: TextView? = null
-
-        init {
-            listIcon = itemView.findViewById(R.id.listIcon)
-            listMenu = itemView.findViewById(R.id.listMenu)
-            listHarga = itemView.findViewById(R.id.listHarga)
-
-        }
-
-
-        fun bind(data: ListMenuMakanan, adapter: OrderAdapter) {
-            listIcon?.setImageResource(data.listIcon)
-            listMenu?.text = data.listMenu
-            listHarga?.text = data.listHarga
-        }
+class OrderAdapter(private val data: ArrayList<Paket>, private val listener: OnAdapterListener) : RecyclerView.Adapter<OrderAdapter.ListMenuViewHolder>() {
+    class ListMenuViewHolder(view: View) : RecyclerView.ViewHolder(view){
+        val listMenu: TextView = view.findViewById(R.id.listMenu)
+        val listHarga: TextView = view.findViewById(R.id.listHarga)
+        val listJumlah: TextView = view.findViewById(R.id.jumlah)
     }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListMenuViewHolder {
-        val inflater = LayoutInflater.from(parent.context)
-        return ListMenuViewHolder(inflater, parent)
+        return ListMenuViewHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.adapter_list_menu, parent, false)
+        )
     }
-
     override fun getItemCount(): Int {
         return data.size
     }
-
     override fun onBindViewHolder(holder: ListMenuViewHolder, position: Int) {
-        holder.bind(data[position], this)
-        holder.itemView.setOnClickListener {
-            val intent = Intent(context, OrderAct::class.java)
-
-            intent.putExtra("listIcon", data[position].listIcon)
-            intent.putExtra("listMenu", data[position].listMenu)
-            intent.putExtra("listHarga", data[position].listHarga)
-            context.startActivity(intent)
+        val pilihan = data[position]
+        holder.listMenu.text = pilihan.namaPaket
+        holder.listMenu.setOnClickListener {
+            listener.onItemClick(pilihan)
         }
+        holder.listHarga.text = pilihan.harga
+        holder.listJumlah.text = pilihan.jumlah
+    }
+    fun setData(list: List<Paket>){
+        data.clear()
+        data.addAll(list)
+        notifyDataSetChanged()
     }
 
-    interface OnClickListener {
-        fun onItemClick(position: Int)
+    interface OnAdapterListener {
+        fun onItemClick(pilihan : Paket)
     }
-    data class ListMenuMakanan(val listIcon: Int, val listMenu: String, val listHarga: String)
 }

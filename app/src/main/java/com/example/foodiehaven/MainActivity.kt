@@ -89,6 +89,7 @@ class MainActivity : AppCompatActivity() {
         cartAdapter = CartAdapter(this, arrayListOf(), object : CartAdapter.OnAdapterListener {
             override fun onClick(cart: Menu) {
                 Toast.makeText(this@MainActivity, "loading", Toast.LENGTH_SHORT).show()
+
             }
             override fun onDelete(cart: Menu) {
                 CoroutineScope(Dispatchers.Main).launch {

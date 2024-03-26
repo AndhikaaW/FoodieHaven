@@ -13,6 +13,9 @@
         android:theme="@style/Theme.FoodieHaven"
         tools:targetApi="31">
         <activity
+            android:name=".Tambah_Data"
+            android:exported="false" />
+        <activity
             android:name=".OrderView"
             android:exported="false" />
         <activity
