@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.foodiehaven.MainActivity
 import com.example.foodiehaven.OrderView
 import com.example.foodiehaven.R
 import com.example.foodiehaven.database.Menu
@@ -32,11 +33,11 @@ class CartAdapter(private val context: Context, private val menu: ArrayList<Menu
         holder.pelanggan.text = cart.namaPelanggan
         holder.pelanggan.setOnClickListener {
             listener.onClick(cart)
-            val intent = Intent(context, OrderView::class.java)
+            val intent = Intent(context, MainActivity::class.java)
 
-            intent.putExtra("namaPelanggan", menu[position].namaPelanggan)
-            intent.putExtra("alamatRumah", menu[position].alamatRumah)
-            intent.putExtra("noTelepon", menu[position].noTelepon)
+//            intent.putExtra("namaPelanggan", menu[position].namaPelanggan)
+//            intent.putExtra("alamatRumah", menu[position].alamatRumah)
+//            intent.putExtra("noTelepon", menu[position].noTelepon)
             context.startActivity(intent)
         }
         holder.telepon.text = cart.noTelepon

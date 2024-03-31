@@ -10,6 +10,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.cardview.widget.CardView
+import com.example.foodiehaven.database.Admin
+import com.example.foodiehaven.database.AdminApp
 import com.example.foodiehaven.database.Menu
 import com.example.foodiehaven.database.MenuApp
 import kotlinx.coroutines.CoroutineScope
@@ -66,20 +68,12 @@ class OrderAct : AppCompatActivity() {
 //        icon.   = Icon
         nama.text = Nama
         harga.text = Harga
-        
         btnPesan.setOnClickListener {
-            val pelanggan = findViewById<TextView>(R.id.input_pelanggan)
-            val telepon = findViewById<TextView>(R.id.input_telepon)
-            val alamat = findViewById<TextView>(R.id.input_alamat)
-            if(pelanggan.text.isNotEmpty() && telepon.text.isNotEmpty() && alamat.text.isNotEmpty()){
-                inputData()
-                val showDialog = AlertDialog.Builder(this)
-                showDialog.setMessage("Success!")
-                startActivity(Intent(this, MainActivity::class.java))
-                finish()
-            } else {
-                Toast.makeText(this,"input tidak boleh kosong" , Toast.LENGTH_SHORT).show()
-            }
+            inputData()
+            val showDialog = AlertDialog.Builder(this)
+            showDialog.setMessage("Success!")
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
 
     }
@@ -97,15 +91,12 @@ class OrderAct : AppCompatActivity() {
         hargaTotal = intHargaTotal
     }
     fun inputData(){
-        val pelanggan = findViewById<TextView>(R.id.input_pelanggan)
-        val telepon = findViewById<TextView>(R.id.input_telepon)
         val namaMenu = findViewById<TextView>(R.id.namaMenu)
         val harga = findViewById<TextView>(R.id.totalHarga)
-        val alamat = findViewById<TextView>(R.id.input_alamat)
 
         CoroutineScope(Dispatchers.IO).launch {
-            MenuApp(this@OrderAct).getMenuDao().addMenu(
-                Menu(0,pelanggan.text.toString(),telepon.text.toString(),alamat.text.toString(),namaMenu.text.toString(),count.toString(),harga.text.toString())
+            AdminApp(this@OrderAct).getAdminDao().addAdmin(
+                Admin(0,namaMenu.text.toString(),harga.text.toString(),count.toString())
             )
         }
     }

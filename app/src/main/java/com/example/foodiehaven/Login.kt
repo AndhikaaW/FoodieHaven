@@ -15,7 +15,6 @@ import kotlinx.coroutines.withContext
 
 class Login : AppCompatActivity() {
     lateinit var btnLogin: Button
-    lateinit var textResgist: TextView
     lateinit var username: EditText
     lateinit var password: EditText
 
@@ -26,34 +25,20 @@ class Login : AppCompatActivity() {
         btnLogin = findViewById(R.id.btn_login)
         username = findViewById(R.id.input_username)
         password = findViewById(R.id.input_password)
-        textResgist = findViewById(R.id.text_regist)
 
         btnLogin.setOnClickListener {
             if(username.text.isNotEmpty() && password.text.isNotEmpty()){
-                prosesLogin()
+                if (username.text.toString() == "admin"){
+                    if (password.text.toString() == "admin"){
+                        startActivity(Intent(this@Login, MainActivity::class.java))
+                    } else{
+                        Toast.makeText(this,"Password Salah" , Toast.LENGTH_SHORT).show()
+                    }
+                } else {
+                    Toast.makeText(this,"Username Salah" , Toast.LENGTH_SHORT).show()
+                }
             }else{
                 Toast.makeText(this,"Email dan Password tidak boleh kosong" , Toast.LENGTH_SHORT).show()
-            }
-        }
-        textResgist.setOnClickListener {
-            startActivity(Intent(this, SignUp::class.java))
-        }
-    }
-
-    private fun prosesLogin(){
-        val username = findViewById<EditText>(R.id.input_username)
-        val password = findViewById<EditText>(R.id.input_password)
-
-        CoroutineScope(Dispatchers.IO).launch {
-            val admin = AdminApp(this@Login).getAdminDao().findUserByUsernameAndPassword(username.text.toString(),password.text.toString())
-            withContext(Dispatchers.Main) {
-                if (admin != null && admin.password == password.text.toString()) {
-                    val intent = Intent(this@Login, MainActivity::class.java)
-                    startActivity(intent)
-                    finish()
-                } else {
-                    Toast.makeText(this@Login, "Username atau password salah", Toast.LENGTH_SHORT).show()
-                }
             }
         }
     }

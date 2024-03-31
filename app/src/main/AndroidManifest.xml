@@ -13,6 +13,12 @@
         android:theme="@style/Theme.FoodieHaven"
         tools:targetApi="31">
         <activity
+            android:name=".History"
+            android:exported="false" />
+        <activity
+            android:name=".Cart"
+            android:exported="false" />
+        <activity
             android:name=".OrderView"
             android:exported="false" />
         <activity

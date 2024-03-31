@@ -4,10 +4,16 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.foodiehaven.Cart
+import com.example.foodiehaven.MainActivity
 import com.example.foodiehaven.OrderAct
 import com.example.foodiehaven.R
+import com.example.foodiehaven.database.Admin
+import com.example.foodiehaven.database.AdminApp
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class OrderAdapter (private val context: Context, private val data: ArrayList<ListMenuMakanan>,private val listener: OnClickListener) : RecyclerView.Adapter<OrderAdapter.ListMenuViewHolder>() {
     class ListMenuViewHolder(inflater: LayoutInflater, parent: ViewGroup) : RecyclerView.ViewHolder(
@@ -48,8 +54,7 @@ class OrderAdapter (private val context: Context, private val data: ArrayList<Li
         holder.bind(data[position], this)
         holder.itemView.setOnClickListener {
             val intent = Intent(context, OrderAct::class.java)
-
-            intent.putExtra("listIcon", data[position].listIcon)
+//            intent.putExtra("listIcon", data[position].listIcon)
             intent.putExtra("listMenu", data[position].listMenu)
             intent.putExtra("listHarga", data[position].listHarga)
             context.startActivity(intent)

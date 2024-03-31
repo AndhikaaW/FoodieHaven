@@ -73,10 +73,10 @@
                         android:drawablePadding="10dp"
                         android:gravity="center_vertical"
                         android:padding="10dp"
-                        android:text="Kabupaten Madiun"
+                        android:text="Keranjang"
                         android:textColor="#ffec2d2d"
                         android:textSize="12sp"
-                        app:drawableStartCompat="@drawable/ic_location"
+                        app:drawableStartCompat="@drawable/ic_cart"
                         app:drawableTint="#ffec2d2d" />
 
                 </androidx.cardview.widget.CardView>

@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var cartAdapter: CartAdapter
     lateinit var btnlogout: ImageView
     lateinit var btnHistory: CardView
+    lateinit var btnOnProcess:CardView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         btnlogout = findViewById(R.id.btn_logout)
         recyclerView = findViewById(R.id.menuPaket)
         btnHistory = findViewById(R.id.History)
+        btnOnProcess = findViewById(R.id.onprocess)
 
         dao = MenuApp.invoke(this@MainActivity).getMenuDao()
 
@@ -54,7 +56,10 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
         btnHistory.setOnClickListener{
-            startActivity(Intent(this@MainActivity, Login::class.java))
+            startActivity(Intent(this@MainActivity, History::class.java))
+        }
+        btnOnProcess.setOnClickListener {
+            startActivity(Intent(this@MainActivity,Cart::class.java))
         }
     }
 

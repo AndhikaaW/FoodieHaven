@@ -3,10 +3,16 @@ package com.example.foodiehaven
 import OrderAdapter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.foodiehaven.database.Admin
+import com.example.foodiehaven.database.AdminApp
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class Order : AppCompatActivity() {
     lateinit var recyclerView: RecyclerView
@@ -30,6 +36,7 @@ class Order : AppCompatActivity() {
 
         recyclerView.layoutManager = GridLayoutManager(this@Order, 2)
         recyclerView.adapter = adapter
+
     }
 
     private fun paket1() {
@@ -45,7 +52,6 @@ class Order : AppCompatActivity() {
 
         adapter = OrderAdapter(this, data, object : OrderAdapter.OnClickListener {
             override fun onItemClick(position: Int) {
-
                 val namaMenu = data[position].listMenu
                 Toast.makeText(this@Order, "Anda memilih $namaMenu", Toast.LENGTH_SHORT).show()
             }
@@ -90,7 +96,6 @@ class Order : AppCompatActivity() {
         data.add(OrderAdapter.ListMenuMakanan(R.drawable.putrimandi,"Putri Mandi","5000"))
         data.add(OrderAdapter.ListMenuMakanan(R.drawable.kroket,"Kroket","5000"))
         data.add(OrderAdapter.ListMenuMakanan(R.drawable.rotigulung,"Roti Gulung","5000"))
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.pastel,"Pastel","5000"))
         data.add(OrderAdapter.ListMenuMakanan(R.drawable.terangbulan,"Terang Bulan","5000"))
 
         adapter = OrderAdapter(this,data, object : OrderAdapter.OnClickListener {
@@ -100,4 +105,5 @@ class Order : AppCompatActivity() {
             }
         })
     }
+
 }
