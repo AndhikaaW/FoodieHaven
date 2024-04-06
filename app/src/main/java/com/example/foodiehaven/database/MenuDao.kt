@@ -5,7 +5,9 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import androidx.room.Transaction
 import androidx.room.Update
+import java.util.concurrent.Flow
 
 @Dao
 interface MenuDao {
@@ -15,7 +17,7 @@ interface MenuDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(menu: Menu)
 
-    @Query("SELECT * FROM `Menu` ORDER BY id DESC")
+    @Query("SELECT * FROM Menu ORDER BY id DESC")
     suspend fun getAllMenu(): List<Menu>
 
     @Update
@@ -23,4 +25,7 @@ interface MenuDao {
 
     @Delete
     suspend fun deleteMenu(menu: Menu)
+
+//    @Query("SELECT biaya FROM `Menu` ORDER BY id DESC LIMIT 1")
+//    suspend fun getBiayaMenu(): Menu
 }

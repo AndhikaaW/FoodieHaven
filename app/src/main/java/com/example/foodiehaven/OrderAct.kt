@@ -1,17 +1,14 @@
 package com.example.foodiehaven
 
 import android.content.Intent
-import android.icu.number.IntegerWidth
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.cardview.widget.CardView
 import com.example.foodiehaven.database.Admin
-import com.example.foodiehaven.database.AdminApp
 import com.example.foodiehaven.database.Menu
 import com.example.foodiehaven.database.MenuApp
 import kotlinx.coroutines.CoroutineScope
@@ -36,6 +33,8 @@ class OrderAct : AppCompatActivity() {
         btnPesan = findViewById(R.id.btnPesan)
         Count = findViewById(R.id.countPaket)
         totalHarga = findViewById(R.id.totalHarga)
+
+
 
         Plus.setOnClickListener {
             count +=1
@@ -70,8 +69,7 @@ class OrderAct : AppCompatActivity() {
         harga.text = Harga
         btnPesan.setOnClickListener {
             inputData()
-            val showDialog = AlertDialog.Builder(this)
-            showDialog.setMessage("Success!")
+            Toast.makeText(this, "Ditambahkan ke Keranjang", Toast.LENGTH_SHORT).show()
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
@@ -95,9 +93,13 @@ class OrderAct : AppCompatActivity() {
         val harga = findViewById<TextView>(R.id.totalHarga)
 
         CoroutineScope(Dispatchers.IO).launch {
-            AdminApp(this@OrderAct).getAdminDao().addAdmin(
-                Admin(0,namaMenu.text.toString(),harga.text.toString(),count.toString())
+            MenuApp(this@OrderAct).getMenuDao().addMenu(
+                Menu(0,namaMenu.text.toString(),harga.text.toString(),count.toString(),"")
             )
         }
     }
+
+//    fun inputdatapesanan(){
+//
+//    }
 }

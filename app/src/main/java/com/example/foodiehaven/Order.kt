@@ -61,12 +61,12 @@ class Order : AppCompatActivity() {
         recyclerView = findViewById(R.id.listPilihanMenu)
 
         var data = arrayListOf<OrderAdapter.ListMenuMakanan>()
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.logo,"Nastar","10000"))
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.logo,"Kastengel","10000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.nastar,"Nastar","10000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.kastengel,"Kastengel","10000"))
         data.add(OrderAdapter.ListMenuMakanan(R.drawable.sagukeju,"Sagu Keju","10000"))
         data.add(OrderAdapter.ListMenuMakanan(R.drawable.kuesemprit,"Kue Sumprit","10000"))
         data.add(OrderAdapter.ListMenuMakanan(R.drawable.putrisalju,"Putri Salju","10000"))
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.logo,"Coklat Meses","10000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.coklatmesses,"Coklat Meses","10000"))
         data.add(OrderAdapter.ListMenuMakanan(R.drawable.coklatmede,"Coklat Mede","10000"))
         data.add(OrderAdapter.ListMenuMakanan(R.drawable.kuekacang,"Kue Kacang","10000"))
 

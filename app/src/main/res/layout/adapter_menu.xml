@@ -30,6 +30,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:gravity="center"
+            android:fontFamily="monospace"
             android:text="example"
             android:textColor="@android:color/black"
             android:textSize="14sp"

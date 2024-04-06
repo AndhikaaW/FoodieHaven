@@ -12,9 +12,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.foodiehaven.adapter.CartAdapter
 import com.example.foodiehaven.adapter.MenuAdapter
-import com.example.foodiehaven.database.Menu
-import com.example.foodiehaven.database.MenuApp
-import com.example.foodiehaven.database.MenuDao
+import com.example.foodiehaven.database.Admin
+import com.example.foodiehaven.database.AdminApp
+import com.example.foodiehaven.database.AdminDao
 import com.example.foodiehaven.databinding.ActivityMainBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
     lateinit var recyclerView: RecyclerView
     lateinit var adapter: MenuAdapter
-    lateinit var dao: MenuDao
+    lateinit var dao: AdminDao
     lateinit var cartAdapter: CartAdapter
     lateinit var btnlogout: ImageView
     lateinit var btnHistory: CardView
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         btnHistory = findViewById(R.id.History)
         btnOnProcess = findViewById(R.id.onprocess)
 
-        dao = MenuApp.invoke(this@MainActivity).getMenuDao()
+        dao = AdminApp.invoke(this@MainActivity).getAdminDao()
 
         init()
 
@@ -69,10 +69,10 @@ class MainActivity : AppCompatActivity() {
     }
     fun loadData (){
         CoroutineScope(Dispatchers.Main).launch {
-            val menu = dao.getAllMenu()
-            Log.d("MainActivity", "dbResponse: $menu")
+            val admin = dao.getAllAdmin()
+            Log.d("MainActivity", "dbResponse: $admin")
             withContext(Dispatchers.Main) {
-                cartAdapter.setData(menu)
+                cartAdapter.setData(admin)
             }
         }
     }
@@ -92,12 +92,12 @@ class MainActivity : AppCompatActivity() {
         val list: RecyclerView? = findViewById(R.id.listKeranjang)
 
         cartAdapter = CartAdapter(this, arrayListOf(), object : CartAdapter.OnAdapterListener {
-            override fun onClick(cart: Menu) {
+            override fun onClick(cart: Admin) {
                 Toast.makeText(this@MainActivity, "loading", Toast.LENGTH_SHORT).show()
             }
-            override fun onDelete(cart: Menu) {
+            override fun onDelete(cart: Admin) {
                 CoroutineScope(Dispatchers.Main).launch {
-                    dao.deleteMenu(cart)
+                    dao.deleteAdmin(cart)
                     withContext(Dispatchers.Main) {
                         loadData()
                     }
