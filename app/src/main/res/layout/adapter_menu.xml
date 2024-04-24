@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
-    app:cardBackgroundColor="#ffd0ffdb"
+    app:cardBackgroundColor="@color/secondarycolor"
     app:cardCornerRadius="10dp"
     app:cardElevation="5dp">
 
@@ -33,7 +33,7 @@
             android:fontFamily="monospace"
             android:text="example"
             android:textColor="@android:color/black"
-            android:textSize="14sp"
+            android:textSize="12sp"
             android:textStyle="bold" />
 
     </RelativeLayout>

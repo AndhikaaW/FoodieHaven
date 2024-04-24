@@ -74,7 +74,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="nama">
+                        android:text="No Telepon">
                     </TextView>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -95,7 +95,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="nama">
+                        android:text="Alamat">
                     </TextView>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -132,6 +132,16 @@
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Daftar Pesanan"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp">
+        </TextView>
 
     </LinearLayout>
 </RelativeLayout>

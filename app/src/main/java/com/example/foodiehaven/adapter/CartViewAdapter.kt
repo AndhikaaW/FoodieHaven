@@ -43,11 +43,12 @@ class CartViewAdapter (private val listmenu: ArrayList<Menu>, private val listen
         listmenu.addAll(list)
         notifyDataSetChanged()
     }
+    fun fix(){
+        listmenu.clear()
+    }
 
     interface OnAdapterListener{
         fun onPluscart(cartlist: Menu)
         fun onDeletecart(cartlist: Menu)
     }
-
-
 }
