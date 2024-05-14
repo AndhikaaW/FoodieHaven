@@ -10,7 +10,6 @@ import com.example.foodiehaven.MainActivity
 import com.example.foodiehaven.OrderAct
 import com.example.foodiehaven.R
 import com.example.foodiehaven.database.Admin
-import com.example.foodiehaven.database.AdminApp
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

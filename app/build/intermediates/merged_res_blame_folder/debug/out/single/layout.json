@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "com.example.foodiehaven.app-mergeDebugResources-36:/layout/fragment_history.xml",
+        "source": "com.example.foodiehaven.app-main-39:/layout/fragment_history.xml"
+    },
+    {
+        "merged": "com.example.foodiehaven.app-mergeDebugResources-36:/layout/activity_order.xml",
+        "source": "com.example.foodiehaven.app-main-39:/layout/activity_order.xml"
+    },
+    {
+        "merged": "com.example.foodiehaven.app-mergeDebugResources-36:/layout/activity_order_view.xml",
+        "source": "com.example.foodiehaven.app-main-39:/layout/activity_order_view.xml"
+    },
+    {
+        "merged": "com.example.foodiehaven.app-mergeDebugResources-36:/layout/activity_order_cart.xml",
+        "source": "com.example.foodiehaven.app-main-39:/layout/activity_order_cart.xml"
+    },
+    {
+        "merged": "com.example.foodiehaven.app-mergeDebugResources-36:/layout/adapter_menu.xml",
+        "source": "com.example.foodiehaven.app-main-39:/layout/adapter_menu.xml"
+    },
+    {
+        "merged": "com.example.foodiehaven.app-mergeDebugResources-36:/layout/activity_cart.xml",
+        "source": "com.example.foodiehaven.app-main-39:/layout/activity_cart.xml"
+    },
+    {
+        "merged": "com.example.foodiehaven.app-mergeDebugResources-36:/layout/activity_main.xml",
+        "source": "com.example.foodiehaven.app-main-39:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.foodiehaven.app-mergeDebugResources-36:/layout/adapter_list_cart.xml",
+        "source": "com.example.foodiehaven.app-main-39:/layout/adapter_list_cart.xml"
+    },
+    {
+        "merged": "com.example.foodiehaven.app-mergeDebugResources-36:/layout/activity_order_act.xml",
+        "source": "com.example.foodiehaven.app-main-39:/layout/activity_order_act.xml"
+    },
+    {
+        "merged": "com.example.foodiehaven.app-mergeDebugResources-36:/layout/adapter_cart_view.xml",
+        "source": "com.example.foodiehaven.app-main-39:/layout/adapter_cart_view.xml"
+    },
+    {
+        "merged": "com.example.foodiehaven.app-mergeDebugResources-36:/layout/adapter_cart.xml",
+        "source": "com.example.foodiehaven.app-main-39:/layout/adapter_cart.xml"
+    },
+    {
+        "merged": "com.example.foodiehaven.app-mergeDebugResources-36:/layout/activity_history.xml",
+        "source": "com.example.foodiehaven.app-main-39:/layout/activity_history.xml"
+    },
+    {
+        "merged": "com.example.foodiehaven.app-mergeDebugResources-36:/layout/adapter_list_menu.xml",
+        "source": "com.example.foodiehaven.app-main-39:/layout/adapter_list_menu.xml"
+    },
+    {
+        "merged": "com.example.foodiehaven.app-mergeDebugResources-36:/layout/activity_login.xml",
+        "source": "com.example.foodiehaven.app-main-39:/layout/activity_login.xml"
+    }
+]

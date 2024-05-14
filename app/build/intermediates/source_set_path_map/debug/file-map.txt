@@ -1,0 +1,40 @@
+com.example.foodiehaven.app-lifecycle-viewmodel-2.6.2-0 C:\Users\User\.gradle\caches\transforms-3\02d5aff3c0edfed3a36f15a525f0e266\transformed\lifecycle-viewmodel-2.6.2\res
+com.example.foodiehaven.app-savedstate-1.2.1-1 C:\Users\User\.gradle\caches\transforms-3\0e8a6dad926873e451b213f9403f2a81\transformed\savedstate-1.2.1\res
+com.example.foodiehaven.app-lifecycle-runtime-ktx-2.6.2-2 C:\Users\User\.gradle\caches\transforms-3\0fda2c52464b88be1c17cd2c68cb0bf8\transformed\lifecycle-runtime-ktx-2.6.2\res
+com.example.foodiehaven.app-activity-1.6.0-3 C:\Users\User\.gradle\caches\transforms-3\1bcbcd2514c668822105112ebb729ee3\transformed\activity-1.6.0\res
+com.example.foodiehaven.app-material-1.9.0-4 C:\Users\User\.gradle\caches\transforms-3\31e316c3023d4e4c561c8bb9ff663c4a\transformed\material-1.9.0\res
+com.example.foodiehaven.app-sqlite-framework-2.3.1-5 C:\Users\User\.gradle\caches\transforms-3\35f5f9f95d87ee1f2cb7c19286327156\transformed\sqlite-framework-2.3.1\res
+com.example.foodiehaven.app-lifecycle-viewmodel-savedstate-2.6.2-6 C:\Users\User\.gradle\caches\transforms-3\3bfc10752484e588d47d49ae643d5d5f\transformed\lifecycle-viewmodel-savedstate-2.6.2\res
+com.example.foodiehaven.app-drawerlayout-1.1.1-7 C:\Users\User\.gradle\caches\transforms-3\56653dac89608167c8ded30331b6f386\transformed\drawerlayout-1.1.1\res
+com.example.foodiehaven.app-startup-runtime-1.1.1-8 C:\Users\User\.gradle\caches\transforms-3\59f847b97c99c816ca50db97d54faa01\transformed\startup-runtime-1.1.1\res
+com.example.foodiehaven.app-emoji2-views-helper-1.2.0-9 C:\Users\User\.gradle\caches\transforms-3\63a30d3ee8d3aeb86cb899fb247d91bc\transformed\emoji2-views-helper-1.2.0\res
+com.example.foodiehaven.app-room-ktx-2.5.2-10 C:\Users\User\.gradle\caches\transforms-3\64b7eca1fd17e17d24591984b2f161de\transformed\room-ktx-2.5.2\res
+com.example.foodiehaven.app-core-runtime-2.2.0-11 C:\Users\User\.gradle\caches\transforms-3\65e28ea48689e73cabab94a9c8b2e245\transformed\core-runtime-2.2.0\res
+com.example.foodiehaven.app-viewpager2-1.0.0-12 C:\Users\User\.gradle\caches\transforms-3\6b8e9cb27ca69262530a24d080cbca15\transformed\viewpager2-1.0.0\res
+com.example.foodiehaven.app-recyclerview-1.1.0-13 C:\Users\User\.gradle\caches\transforms-3\6cebab8146e4bc57e2aab12003045101\transformed\recyclerview-1.1.0\res
+com.example.foodiehaven.app-annotation-experimental-1.3.0-14 C:\Users\User\.gradle\caches\transforms-3\6e52122ef287a4c4ffe928d2eb7e7c50\transformed\annotation-experimental-1.3.0\res
+com.example.foodiehaven.app-core-splashscreen-1.0.0-15 C:\Users\User\.gradle\caches\transforms-3\7631657c53b5a48e41885709d7b0941e\transformed\core-splashscreen-1.0.0\res
+com.example.foodiehaven.app-core-ktx-1.9.0-16 C:\Users\User\.gradle\caches\transforms-3\7e70caca9b8b5fc676af6153d4ae905c\transformed\core-ktx-1.9.0\res
+com.example.foodiehaven.app-constraintlayout-2.1.4-17 C:\Users\User\.gradle\caches\transforms-3\84f78499c5eacf8c665002044b827822\transformed\constraintlayout-2.1.4\res
+com.example.foodiehaven.app-lifecycle-livedata-2.6.2-18 C:\Users\User\.gradle\caches\transforms-3\8760af09fe6c36414623859eb14237ef\transformed\lifecycle-livedata-2.6.2\res
+com.example.foodiehaven.app-sqlite-2.3.1-19 C:\Users\User\.gradle\caches\transforms-3\8843b0f70810ab97856aaed9b2661548\transformed\sqlite-2.3.1\res
+com.example.foodiehaven.app-lifecycle-livedata-core-2.6.2-20 C:\Users\User\.gradle\caches\transforms-3\903ac2a58c63a48a3732b2b9ac583edc\transformed\lifecycle-livedata-core-2.6.2\res
+com.example.foodiehaven.app-appcompat-1.6.1-21 C:\Users\User\.gradle\caches\transforms-3\90a21b931d9837d1a355c817c29a32a2\transformed\appcompat-1.6.1\res
+com.example.foodiehaven.app-cardview-1.0.0-22 C:\Users\User\.gradle\caches\transforms-3\b34c526a9eaf3cbdced1dfee2e910c90\transformed\cardview-1.0.0\res
+com.example.foodiehaven.app-transition-1.2.0-23 C:\Users\User\.gradle\caches\transforms-3\c808de3253f362f6a65586db4d44bde9\transformed\transition-1.2.0\res
+com.example.foodiehaven.app-room-runtime-2.5.2-24 C:\Users\User\.gradle\caches\transforms-3\d7a6edb2eaf096739afacceaa13da3eb\transformed\room-runtime-2.5.2\res
+com.example.foodiehaven.app-profileinstaller-1.3.0-25 C:\Users\User\.gradle\caches\transforms-3\d8d37302ced9d5ae70b54ed52cfb9bb4\transformed\profileinstaller-1.3.0\res
+com.example.foodiehaven.app-fragment-1.3.6-26 C:\Users\User\.gradle\caches\transforms-3\d959051a1bcab6d2b15c1bae72595523\transformed\fragment-1.3.6\res
+com.example.foodiehaven.app-emoji2-1.2.0-27 C:\Users\User\.gradle\caches\transforms-3\e176ed21aee2331f32a1424bfee5f987\transformed\emoji2-1.2.0\res
+com.example.foodiehaven.app-appcompat-resources-1.6.1-28 C:\Users\User\.gradle\caches\transforms-3\e3db95fb7a859834bc265e49fd627ac9\transformed\appcompat-resources-1.6.1\res
+com.example.foodiehaven.app-core-1.9.0-29 C:\Users\User\.gradle\caches\transforms-3\e5cf8c63655e045d6f7a67e3b005ad27\transformed\core-1.9.0\res
+com.example.foodiehaven.app-coordinatorlayout-1.1.0-30 C:\Users\User\.gradle\caches\transforms-3\ea0928ba7dba3b09978f3f926432e65c\transformed\coordinatorlayout-1.1.0\res
+com.example.foodiehaven.app-lifecycle-runtime-2.6.2-31 C:\Users\User\.gradle\caches\transforms-3\f043655cedf92d5b241334fc9d49be94\transformed\lifecycle-runtime-2.6.2\res
+com.example.foodiehaven.app-lifecycle-process-2.6.2-32 C:\Users\User\.gradle\caches\transforms-3\fe065dc782c33b8802a5d596a758e0ac\transformed\lifecycle-process-2.6.2\res
+com.example.foodiehaven.app-pngs-33 E:\SMT 4\Proyek TI\FoodieHaven\app\build\generated\res\pngs\debug
+com.example.foodiehaven.app-resValues-34 E:\SMT 4\Proyek TI\FoodieHaven\app\build\generated\res\resValues\debug
+com.example.foodiehaven.app-packageDebugResources-35 E:\SMT 4\Proyek TI\FoodieHaven\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.foodiehaven.app-packageDebugResources-36 E:\SMT 4\Proyek TI\FoodieHaven\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.foodiehaven.app-merged_res-37 E:\SMT 4\Proyek TI\FoodieHaven\app\build\intermediates\merged_res\debug
+com.example.foodiehaven.app-debug-38 E:\SMT 4\Proyek TI\FoodieHaven\app\src\debug\res
+com.example.foodiehaven.app-main-39 E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\res

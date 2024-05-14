@@ -8,7 +8,6 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
-import com.example.foodiehaven.database.Admin
 import com.example.foodiehaven.database.Menu
 import com.example.foodiehaven.database.MenuApp
 import kotlinx.coroutines.CoroutineScope
@@ -94,7 +93,7 @@ class OrderAct : AppCompatActivity() {
 
         CoroutineScope(Dispatchers.IO).launch {
             MenuApp(this@OrderAct).getMenuDao().addMenu(
-                Menu(0,namaMenu.text.toString(),harga.text.toString(),count.toString(),"")
+                Menu(0,namaMenu.text.toString(),harga.text.toString(),count.toString())
             )
         }
     }

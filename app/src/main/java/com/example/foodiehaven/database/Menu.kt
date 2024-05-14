@@ -15,6 +15,4 @@ data class Menu (
     var hargamenu: String,
     @ColumnInfo
     var count: String,
-    @ColumnInfo
-    var AdminId: String
 )

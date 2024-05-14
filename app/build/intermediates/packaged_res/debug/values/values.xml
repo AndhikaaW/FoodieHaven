@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="primarycolor">#3D832A</color>
+    <color name="secondarycolor">#ffd0ffdb</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Foodie Haven</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="Base.Theme.FoodieHaven" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+        <item name="colorPrimary">@color/primarycolor</item>
+    </style>
+    <style name="Theme.FoodieHaven" parent="Base.Theme.FoodieHaven"/>
+</resources>

@@ -25,7 +25,7 @@ class OrderView : AppCompatActivity() {
         alamat.text = Alamat
     }
 
-    fun tampilData(){
-
-    }
+//    fun tampilData(){
+//
+//    }
 }

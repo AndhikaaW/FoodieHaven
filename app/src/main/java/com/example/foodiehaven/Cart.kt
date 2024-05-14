@@ -11,9 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.foodiehaven.adapter.CartAdapter
 import com.example.foodiehaven.adapter.CartViewAdapter
-import com.example.foodiehaven.database.Admin
-import com.example.foodiehaven.database.AdminApp
-import com.example.foodiehaven.database.AdminDao
 import com.example.foodiehaven.database.Menu
 import com.example.foodiehaven.database.MenuApp
 import com.example.foodiehaven.database.MenuDao
