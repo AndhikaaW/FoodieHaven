@@ -4,11 +4,13 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.ForeignKey
+import androidx.room.Index
 
-@Entity(tableName = "Menu")
-data class Menu (
+@Entity
+data class Menu(
+    val id: Int,
     @PrimaryKey(autoGenerate = true)
-    var id: Long,
+    var menuid: Int,
     @ColumnInfo
     var namamenu: String,
     @ColumnInfo

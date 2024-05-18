@@ -8,8 +8,8 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
+import com.example.foodiehaven.database.AdminApp
 import com.example.foodiehaven.database.Menu
-import com.example.foodiehaven.database.MenuApp
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -90,10 +90,11 @@ class OrderAct : AppCompatActivity() {
     fun inputData(){
         val namaMenu = findViewById<TextView>(R.id.namaMenu)
         val harga = findViewById<TextView>(R.id.totalHarga)
+//        val noPesanan = findViewById<EditText>(R.id.nomorPesanan)
 
         CoroutineScope(Dispatchers.IO).launch {
-            MenuApp(this@OrderAct).getMenuDao().addMenu(
-                Menu(0,namaMenu.text.toString(),harga.text.toString(),count.toString())
+            AdminApp(this@OrderAct).getAdminDao().addMenu(
+                Menu(1,0,namaMenu.text.toString(),harga.text.toString(),count.toString(),)
             )
         }
     }

@@ -5,6 +5,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import androidx.room.Transaction
 import androidx.room.Update
 
 @Dao
@@ -15,12 +16,26 @@ interface AdminDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(admin: Admin)
 
-    @Query("SELECT * FROM Admin ORDER BY id DESC")
+    @Query("SELECT * FROM Admin ORDER BY adminid DESC")
     suspend fun getAllAdmin(): List<Admin>
-
-    @Update
-    suspend fun updateAdmin(admin: Admin)
 
     @Delete
     suspend fun deleteAdmin(admin: Admin)
+
+
+    @Insert
+    suspend fun addMenu(menu: Menu)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insert(menu: Menu)
+    @Query("SELECT * FROM Menu ORDER BY id DESC")
+    suspend fun getAllMenu(): List<Menu>
+    @Delete
+    suspend fun deleteMenu(menu: Menu)
+
+    @Transaction
+    @Query("SELECT * FROM Admin WHERE adminid = :adminid")
+    fun getById(adminid:Long): List<Customer>
+
+//    @Transaction
+//    fun getById(adminid:Long):List<Customer>
 }

@@ -39,14 +39,16 @@ public final class AdminApp_Impl extends AdminApp {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `Admin` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `namaPelanggan` TEXT NOT NULL, `alamatRumah` TEXT NOT NULL, `noTelepon` TEXT NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `Admin` (`adminid` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `namaPelanggan` TEXT NOT NULL, `noTelepon` TEXT NOT NULL, `alamatRumah` TEXT NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `Menu` (`id` INTEGER NOT NULL, `menuid` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `namamenu` TEXT NOT NULL, `hargamenu` TEXT NOT NULL, `count` TEXT NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '8a17f67c0cf4f26ebdc7d26a9b9e0f09')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'db4bd30365de7952bb461530410fac3d')");
       }
 
       @Override
       public void dropAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("DROP TABLE IF EXISTS `Admin`");
+        _db.execSQL("DROP TABLE IF EXISTS `Menu`");
         if (mCallbacks != null) {
           for (int _i = 0, _size = mCallbacks.size(); _i < _size; _i++) {
             mCallbacks.get(_i).onDestructiveMigration(_db);
@@ -86,10 +88,10 @@ public final class AdminApp_Impl extends AdminApp {
       @Override
       public RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
         final HashMap<String, TableInfo.Column> _columnsAdmin = new HashMap<String, TableInfo.Column>(4);
-        _columnsAdmin.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsAdmin.put("adminid", new TableInfo.Column("adminid", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsAdmin.put("namaPelanggan", new TableInfo.Column("namaPelanggan", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
-        _columnsAdmin.put("alamatRumah", new TableInfo.Column("alamatRumah", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsAdmin.put("noTelepon", new TableInfo.Column("noTelepon", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsAdmin.put("alamatRumah", new TableInfo.Column("alamatRumah", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysAdmin = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesAdmin = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoAdmin = new TableInfo("Admin", _columnsAdmin, _foreignKeysAdmin, _indicesAdmin);
@@ -99,9 +101,24 @@ public final class AdminApp_Impl extends AdminApp {
                   + " Expected:\n" + _infoAdmin + "\n"
                   + " Found:\n" + _existingAdmin);
         }
+        final HashMap<String, TableInfo.Column> _columnsMenu = new HashMap<String, TableInfo.Column>(5);
+        _columnsMenu.put("id", new TableInfo.Column("id", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsMenu.put("menuid", new TableInfo.Column("menuid", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsMenu.put("namamenu", new TableInfo.Column("namamenu", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsMenu.put("hargamenu", new TableInfo.Column("hargamenu", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsMenu.put("count", new TableInfo.Column("count", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysMenu = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesMenu = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoMenu = new TableInfo("Menu", _columnsMenu, _foreignKeysMenu, _indicesMenu);
+        final TableInfo _existingMenu = TableInfo.read(_db, "Menu");
+        if (! _infoMenu.equals(_existingMenu)) {
+          return new RoomOpenHelper.ValidationResult(false, "Menu(com.example.foodiehaven.database.Menu).\n"
+                  + " Expected:\n" + _infoMenu + "\n"
+                  + " Found:\n" + _existingMenu);
+        }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "8a17f67c0cf4f26ebdc7d26a9b9e0f09", "43a6436ccfb964773e9c0ad1f035f25c");
+    }, "db4bd30365de7952bb461530410fac3d", "a1ef31e4f9b4bec6845c44d77279a524");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -114,7 +131,7 @@ public final class AdminApp_Impl extends AdminApp {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "Admin");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "Admin","Menu");
   }
 
   @Override
@@ -124,6 +141,7 @@ public final class AdminApp_Impl extends AdminApp {
     try {
       super.beginTransaction();
       _db.execSQL("DELETE FROM `Admin`");
+      _db.execSQL("DELETE FROM `Menu`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();

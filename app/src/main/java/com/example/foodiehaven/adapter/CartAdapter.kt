@@ -35,8 +35,8 @@ class CartAdapter(private val context: Context, private val admin: ArrayList<Adm
             val intent = Intent(context, OrderView::class.java)
 
             intent.putExtra("namaPelanggan", admin[position].namaPelanggan)
-            intent.putExtra("alamatRumah", admin[position].alamatRumah)
             intent.putExtra("noTelepon", admin[position].noTelepon)
+            intent.putExtra("alamatRumah", admin[position].alamatRumah)
             context.startActivity(intent)
         }
         holder.telepon.text = cart.noTelepon

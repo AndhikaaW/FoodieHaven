@@ -45,12 +45,15 @@ public final class ActivityOrderActBinding implements ViewBinding {
   public final TextView namaMenu;
 
   @NonNull
+  public final EditText nomorPesanan;
+
+  @NonNull
   public final TextView totalHarga;
 
   private ActivityOrderActBinding(@NonNull RelativeLayout rootView, @NonNull Button btnPesan,
       @NonNull EditText countPaket, @NonNull TextView hargaMenu, @NonNull ImageView iconMenu,
       @NonNull CardView imgAdd, @NonNull CardView imgMinus, @NonNull TextView namaMenu,
-      @NonNull TextView totalHarga) {
+      @NonNull EditText nomorPesanan, @NonNull TextView totalHarga) {
     this.rootView = rootView;
     this.btnPesan = btnPesan;
     this.countPaket = countPaket;
@@ -59,6 +62,7 @@ public final class ActivityOrderActBinding implements ViewBinding {
     this.imgAdd = imgAdd;
     this.imgMinus = imgMinus;
     this.namaMenu = namaMenu;
+    this.nomorPesanan = nomorPesanan;
     this.totalHarga = totalHarga;
   }
 
@@ -131,6 +135,12 @@ public final class ActivityOrderActBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.nomorPesanan;
+      EditText nomorPesanan = ViewBindings.findChildViewById(rootView, id);
+      if (nomorPesanan == null) {
+        break missingId;
+      }
+
       id = R.id.totalHarga;
       TextView totalHarga = ViewBindings.findChildViewById(rootView, id);
       if (totalHarga == null) {
@@ -138,7 +148,7 @@ public final class ActivityOrderActBinding implements ViewBinding {
       }
 
       return new ActivityOrderActBinding((RelativeLayout) rootView, btnPesan, countPaket, hargaMenu,
-          iconMenu, imgAdd, imgMinus, namaMenu, totalHarga);
+          iconMenu, imgAdd, imgMinus, namaMenu, nomorPesanan, totalHarga);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

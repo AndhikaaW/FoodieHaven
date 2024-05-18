@@ -6,9 +6,10 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 
-@Database(entities = [Admin::class], version = 1)
+@Database(entities = [Admin::class,Menu::class], version = 1)
 abstract class AdminApp: RoomDatabase() {
     abstract fun getAdminDao(): AdminDao
+//    abstract fun getAdminDao(): MenuDao
 
     companion object{
         @Volatile

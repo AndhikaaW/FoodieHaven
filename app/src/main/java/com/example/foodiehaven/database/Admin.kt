@@ -4,18 +4,14 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "Admin")
+@Entity
 data class Admin (
     @PrimaryKey(autoGenerate = true)
-    var id: Long,
+    var adminid: Long,
     @ColumnInfo
     var namaPelanggan: String,
     @ColumnInfo
-    var alamatRumah:String,
-    @ColumnInfo
     var noTelepon: String,
-//    @ColumnInfo
-//    var Menu: String,
-//    @ColumnInfo
-//    var jumlahMenu: String
+    @ColumnInfo
+    var alamatRumah:String,
 )

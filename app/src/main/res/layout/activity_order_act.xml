@@ -44,6 +44,13 @@
                 android:text="hargaMenu">
             </TextView>
         </LinearLayout>
+        <EditText
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/nomorPesanan"
+            android:inputType="number">
+        </EditText>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

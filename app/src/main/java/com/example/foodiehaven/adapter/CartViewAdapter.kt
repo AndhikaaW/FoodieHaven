@@ -1,5 +1,7 @@
 package com.example.foodiehaven.adapter
 
+import android.content.Context
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,10 +9,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.foodiehaven.R
-import com.example.foodiehaven.database.Admin
 import com.example.foodiehaven.database.Menu
 
-class CartViewAdapter (private val listmenu: ArrayList<Menu>, private val listener: OnAdapterListener) : RecyclerView.Adapter<CartViewAdapter.CartlistViewHolder>(){
+class CartViewAdapter (private val context: Context, private val listmenu: ArrayList<Menu>, private val listener: OnAdapterListener) : RecyclerView.Adapter<CartViewAdapter.CartlistViewHolder>(){
+
     class CartlistViewHolder(view: View) : RecyclerView.ViewHolder(view){
         val menu: TextView = view.findViewById(R.id.menu)
         val harga: TextView = view.findViewById(R.id.harga)
@@ -31,6 +33,7 @@ class CartViewAdapter (private val listmenu: ArrayList<Menu>, private val listen
         holder.menu.text = cartlist.namamenu
         holder.harga.text = cartlist.hargamenu
         holder.jumlah.text = cartlist.count
+
         holder.icon_plus.setOnClickListener {
             listener.onPluscart(cartlist)
         }
@@ -42,9 +45,6 @@ class CartViewAdapter (private val listmenu: ArrayList<Menu>, private val listen
         listmenu.clear()
         listmenu.addAll(list)
         notifyDataSetChanged()
-    }
-    fun fix(){
-        listmenu.clear()
     }
 
     interface OnAdapterListener{

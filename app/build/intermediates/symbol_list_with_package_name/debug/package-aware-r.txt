@@ -3077,7 +3077,6 @@ id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id FUNCTION
-id HargaPesanan
 id History
 id META
 id NO_DEBUG
@@ -3091,7 +3090,6 @@ id SYM
 id Source
 id TOP_END
 id TOP_START
-id WaktuPemesanan
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -3335,6 +3333,7 @@ id line3
 id linear
 id listHarga
 id listIcon
+id listItem
 id listKeranjang
 id listMenu
 id listMode
@@ -3417,6 +3416,7 @@ id neverCompleteToEnd
 id neverCompleteToStart
 id noScroll
 id noState
+id nomorPesanan
 id none
 id normal
 id north
@@ -3549,7 +3549,6 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
-id tambahPesanan
 id telepon
 id text
 id text2
@@ -3728,7 +3727,6 @@ layout activity_login
 layout activity_main
 layout activity_order
 layout activity_order_act
-layout activity_order_cart
 layout activity_order_view
 layout adapter_cart
 layout adapter_cart_view

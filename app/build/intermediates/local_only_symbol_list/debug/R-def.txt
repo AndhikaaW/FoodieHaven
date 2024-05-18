@@ -58,12 +58,10 @@ drawable sagukeju
 drawable sosissolo
 drawable terangbulan
 id Alamat
-id HargaPesanan
 id History
 id Nama
 id NoTelepon
 id Source
-id WaktuPemesanan
 id btnPesan
 id btn_login
 id btn_logout
@@ -85,6 +83,7 @@ id input_username
 id jumlah
 id listHarga
 id listIcon
+id listItem
 id listKeranjang
 id listMenu
 id listPilihanMenu
@@ -93,11 +92,11 @@ id menu
 id menuPaket
 id namaMenu
 id namaPaket
+id nomorPesanan
 id onprocess
 id paketIcon
 id pelanggan
 id selected
-id tambahPesanan
 id telepon
 id tombolKirim
 id totalHarga
@@ -107,7 +106,6 @@ layout activity_login
 layout activity_main
 layout activity_order
 layout activity_order_act
-layout activity_order_cart
 layout activity_order_view
 layout adapter_cart
 layout adapter_cart_view

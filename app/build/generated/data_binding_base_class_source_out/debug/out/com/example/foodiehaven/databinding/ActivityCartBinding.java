@@ -4,11 +4,11 @@ package com.example.foodiehaven.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -22,18 +22,27 @@ public final class ActivityCartBinding implements ViewBinding {
   private final RelativeLayout rootView;
 
   @NonNull
-  public final TextView HargaPesanan;
+  public final EditText inputAlamat;
+
+  @NonNull
+  public final EditText inputPelanggan;
+
+  @NonNull
+  public final EditText inputTelepon;
 
   @NonNull
   public final RecyclerView listViewKeranjang;
 
   @NonNull
-  public final CardView tombolKirim;
+  public final Button tombolKirim;
 
-  private ActivityCartBinding(@NonNull RelativeLayout rootView, @NonNull TextView HargaPesanan,
-      @NonNull RecyclerView listViewKeranjang, @NonNull CardView tombolKirim) {
+  private ActivityCartBinding(@NonNull RelativeLayout rootView, @NonNull EditText inputAlamat,
+      @NonNull EditText inputPelanggan, @NonNull EditText inputTelepon,
+      @NonNull RecyclerView listViewKeranjang, @NonNull Button tombolKirim) {
     this.rootView = rootView;
-    this.HargaPesanan = HargaPesanan;
+    this.inputAlamat = inputAlamat;
+    this.inputPelanggan = inputPelanggan;
+    this.inputTelepon = inputTelepon;
     this.listViewKeranjang = listViewKeranjang;
     this.tombolKirim = tombolKirim;
   }
@@ -65,9 +74,21 @@ public final class ActivityCartBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.HargaPesanan;
-      TextView HargaPesanan = ViewBindings.findChildViewById(rootView, id);
-      if (HargaPesanan == null) {
+      id = R.id.input_alamat;
+      EditText inputAlamat = ViewBindings.findChildViewById(rootView, id);
+      if (inputAlamat == null) {
+        break missingId;
+      }
+
+      id = R.id.input_pelanggan;
+      EditText inputPelanggan = ViewBindings.findChildViewById(rootView, id);
+      if (inputPelanggan == null) {
+        break missingId;
+      }
+
+      id = R.id.input_telepon;
+      EditText inputTelepon = ViewBindings.findChildViewById(rootView, id);
+      if (inputTelepon == null) {
         break missingId;
       }
 
@@ -78,13 +99,13 @@ public final class ActivityCartBinding implements ViewBinding {
       }
 
       id = R.id.tombolKirim;
-      CardView tombolKirim = ViewBindings.findChildViewById(rootView, id);
+      Button tombolKirim = ViewBindings.findChildViewById(rootView, id);
       if (tombolKirim == null) {
         break missingId;
       }
 
-      return new ActivityCartBinding((RelativeLayout) rootView, HargaPesanan, listViewKeranjang,
-          tombolKirim);
+      return new ActivityCartBinding((RelativeLayout) rootView, inputAlamat, inputPelanggan,
+          inputTelepon, listViewKeranjang, tombolKirim);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

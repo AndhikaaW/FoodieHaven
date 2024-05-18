@@ -1,8 +1,12 @@
 package com.example.foodiehaven
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.ViewGroup
 import android.widget.TextView
+import com.example.foodiehaven.database.Menu
 
 class OrderView : AppCompatActivity() {
 //    lateinit var dao: MenuDao
@@ -23,9 +27,6 @@ class OrderView : AppCompatActivity() {
         nama.text = Nama
         noTelepon.text = NoTelepon
         alamat.text = Alamat
-    }
 
-//    fun tampilData(){
-//
-//    }
+    }
 }

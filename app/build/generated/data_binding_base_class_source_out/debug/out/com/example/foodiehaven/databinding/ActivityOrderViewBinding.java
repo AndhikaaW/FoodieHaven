@@ -8,6 +8,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.foodiehaven.R;
@@ -29,15 +30,15 @@ public final class ActivityOrderViewBinding implements ViewBinding {
   public final TextView NoTelepon;
 
   @NonNull
-  public final TextView WaktuPemesanan;
+  public final RecyclerView listItem;
 
   private ActivityOrderViewBinding(@NonNull RelativeLayout rootView, @NonNull TextView Alamat,
-      @NonNull TextView Nama, @NonNull TextView NoTelepon, @NonNull TextView WaktuPemesanan) {
+      @NonNull TextView Nama, @NonNull TextView NoTelepon, @NonNull RecyclerView listItem) {
     this.rootView = rootView;
     this.Alamat = Alamat;
     this.Nama = Nama;
     this.NoTelepon = NoTelepon;
-    this.WaktuPemesanan = WaktuPemesanan;
+    this.listItem = listItem;
   }
 
   @Override
@@ -85,14 +86,14 @@ public final class ActivityOrderViewBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.WaktuPemesanan;
-      TextView WaktuPemesanan = ViewBindings.findChildViewById(rootView, id);
-      if (WaktuPemesanan == null) {
+      id = R.id.listItem;
+      RecyclerView listItem = ViewBindings.findChildViewById(rootView, id);
+      if (listItem == null) {
         break missingId;
       }
 
       return new ActivityOrderViewBinding((RelativeLayout) rootView, Alamat, Nama, NoTelepon,
-          WaktuPemesanan);
+          listItem);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
