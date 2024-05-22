@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
@@ -21,12 +22,15 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.util.Calendar
 import java.util.Objects
 
 class Cart : AppCompatActivity() {
     lateinit var cartViewAdapter: CartViewAdapter
     lateinit var dao: AdminDao
+
     lateinit var btnKirim: Button
+    lateinit var btnTanggal: ImageView
 //    lateinit var harga: TextView
 //    var TotalHargaPesanan = 0
 
@@ -35,20 +39,36 @@ class Cart : AppCompatActivity() {
         setContentView(R.layout.activity_cart)
 
         btnKirim = findViewById(R.id.tombolKirim)
+        btnTanggal = findViewById(R.id.btntgl)
 
         dao = AdminApp.invoke(this@Cart).getAdminDao()
         setupRecycleView()
+        btnTanggal.setOnClickListener {
+            val tglPesan = findViewById<TextView>(R.id.input_tanggal)
+
+            val calendar = Calendar.getInstance()
+            val year = calendar.get(Calendar.YEAR)
+            val month = calendar.get(Calendar.MONTH)
+            val dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH)
+            val hour = calendar.get(Calendar.HOUR_OF_DAY)
+            val minute = calendar.get(Calendar.MINUTE)
+            val second = calendar.get(Calendar.SECOND)
+
+            val formattedDateTime = String.format("%d-%02d-%02d %02d:%02d:%02d",dayOfMonth ,month ,year , hour,minute,second)
+            tglPesan.text = formattedDateTime
+        }
 
         btnKirim.setOnClickListener {
             val namaPelanggan = findViewById<TextView>(R.id.input_pelanggan)
             val noTelepon = findViewById<TextView>(R.id.input_telepon)
             val alamat = findViewById<TextView>(R.id.input_alamat)
+            val tglPesan = findViewById<TextView>(R.id.input_tanggal)
 //            val bundle = intent.getBundleExtra("dataBundle")
 //            if (bundle != null) {
 //                val namaMenu = bundle.getString("namaMenu")
 //                val hargaMenu = bundle.getString("hargaMenu")
 //            }
-//
+
 //            val intent = Intent(this, OrderCart::class.java)
 //            intent.putExtra("dataBundle",bundle)
 //            startActivity(intent)
@@ -58,11 +78,14 @@ class Cart : AppCompatActivity() {
 //            intent.putExtras(bundle)
 //            startActivity(intent)
 //            startActivity(Intent(this@Cart,OrderCart::class.java))
+
             if(namaPelanggan.text.isNotEmpty()){
                 if(noTelepon.text.isNotEmpty()){
                     if(alamat.text.isNotEmpty()){
-                        inputData()
-                        startActivity(Intent(this@Cart, MainActivity::class.java))
+                        if(tglPesan.text.isNotEmpty()){
+                            inputData()
+                            startActivity(Intent(this@Cart, MainActivity::class.java))
+                        }
                     } else {
                         Toast.makeText(this,"Alamat tidak boleh kosong", Toast.LENGTH_SHORT).show()
                     }
@@ -73,6 +96,7 @@ class Cart : AppCompatActivity() {
                 Toast.makeText(this,"Nama Pelanggan tidak boleh kosong", Toast.LENGTH_SHORT).show()
             }
         }
+////
     }
     override fun onStart() {
         super.onStart()
@@ -92,8 +116,9 @@ class Cart : AppCompatActivity() {
         val namaPelanggan = findViewById<TextView>(R.id.input_pelanggan)
         val noTelepon = findViewById<TextView>(R.id.input_telepon)
         val alamat = findViewById<TextView>(R.id.input_alamat)
+        val tglPesan = findViewById<TextView>(R.id.input_tanggal)
 
-        val admin = Admin(0,namaPelanggan.text.toString(),noTelepon.text.toString(), alamat.text.toString())
+        val admin = Admin(0,namaPelanggan.text.toString(),noTelepon.text.toString(),alamat.text.toString(),tglPesan.text.toString())
         CoroutineScope(Dispatchers.IO).launch {
             AdminApp(this@Cart).getAdminDao().addAdmin(
                 admin
@@ -103,9 +128,6 @@ class Cart : AppCompatActivity() {
     fun setupRecycleView() {
         val list: RecyclerView? = findViewById(R.id.listViewKeranjang)
         cartViewAdapter = CartViewAdapter(this,arrayListOf(),object : CartViewAdapter.OnAdapterListener{
-            override fun onPluscart(cartlist: Menu) {
-
-            }
             override fun onDeletecart(cartlist: Menu) {
                 CoroutineScope(Dispatchers.Main).launch {
                     dao.deleteMenu(cartlist)

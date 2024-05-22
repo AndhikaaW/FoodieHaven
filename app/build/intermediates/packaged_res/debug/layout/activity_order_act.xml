@@ -6,17 +6,45 @@
     android:layout_height="match_parent"
     tools:context=".OrderAct"
     android:gravity="center_vertical">
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="-20dp"
+        android:layout_marginEnd="-300dp"
+        android:layout_marginTop="-230dp"
+        android:background="@drawable/vector"
+        android:rotation="230">
+    </ImageView>
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="-70dp"
+        android:layout_marginEnd="-300dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginBottom="-200dp"
+        android:background="@drawable/vector"
+        android:rotation="130">
+    </ImageView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data Pesanan"
+            android:fontFamily="sans-serif"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textStyle="bold">
+        </TextView>
         <ImageView
-            android:layout_width="200dp"
-            android:layout_height="170dp"
-            android:id="@+id/iconMenu"
-            android:src="@drawable/logo"
+            android:layout_width="115dp"
+            android:layout_height="112dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="100dp">
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/shopping_cart">
         </ImageView>
 
         <TextView
@@ -24,6 +52,8 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:id="@+id/namaMenu"
+            android:textSize="20dp"
+            android:fontFamily="monospace"
             android:text="menu">
         </TextView>
         <LinearLayout
@@ -34,21 +64,24 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rp ">
+                android:text="Rp "
+                android:textSize="20dp"
+                android:fontFamily="monospace">
             </TextView>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:id="@+id/hargaMenu"
-                android:text="hargaMenu">
+                android:text="hargaMenu"
+                android:textSize="20dp"
+                android:fontFamily="monospace">
             </TextView>
         </LinearLayout>
         <EditText
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:id="@+id/nomorPesanan"
             android:inputType="number">
         </EditText>
         <LinearLayout

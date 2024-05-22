@@ -18,7 +18,6 @@ class CartViewAdapter (private val context: Context, private val listmenu: Array
         val harga: TextView = view.findViewById(R.id.harga)
         val jumlah: TextView = view.findViewById(R.id.jumlah)
         val icon_delete: ImageView = view.findViewById(R.id.icon_delete)
-        val icon_plus: ImageView = view.findViewById(R.id.icon_plus)
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartlistViewHolder {
         return CartlistViewHolder(
@@ -34,9 +33,6 @@ class CartViewAdapter (private val context: Context, private val listmenu: Array
         holder.harga.text = cartlist.hargamenu
         holder.jumlah.text = cartlist.count
 
-        holder.icon_plus.setOnClickListener {
-            listener.onPluscart(cartlist)
-        }
         holder.icon_delete.setOnClickListener {
             listener.onDeletecart(cartlist)
         }
@@ -48,7 +44,6 @@ class CartViewAdapter (private val context: Context, private val listmenu: Array
     }
 
     interface OnAdapterListener{
-        fun onPluscart(cartlist: Menu)
         fun onDeletecart(cartlist: Menu)
     }
 }

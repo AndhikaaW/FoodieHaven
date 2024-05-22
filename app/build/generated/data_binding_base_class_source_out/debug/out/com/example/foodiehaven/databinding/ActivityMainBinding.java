@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
@@ -26,13 +25,7 @@ public final class ActivityMainBinding implements ViewBinding {
   public final CardView History;
 
   @NonNull
-  public final TextView Source;
-
-  @NonNull
   public final ImageView btnLogout;
-
-  @NonNull
-  public final CoordinatorLayout fragmentContainer;
 
   @NonNull
   public final RecyclerView listKeranjang;
@@ -44,14 +37,11 @@ public final class ActivityMainBinding implements ViewBinding {
   public final CardView onprocess;
 
   private ActivityMainBinding(@NonNull CoordinatorLayout rootView, @NonNull CardView History,
-      @NonNull TextView Source, @NonNull ImageView btnLogout,
-      @NonNull CoordinatorLayout fragmentContainer, @NonNull RecyclerView listKeranjang,
+      @NonNull ImageView btnLogout, @NonNull RecyclerView listKeranjang,
       @NonNull RecyclerView menuPaket, @NonNull CardView onprocess) {
     this.rootView = rootView;
     this.History = History;
-    this.Source = Source;
     this.btnLogout = btnLogout;
-    this.fragmentContainer = fragmentContainer;
     this.listKeranjang = listKeranjang;
     this.menuPaket = menuPaket;
     this.onprocess = onprocess;
@@ -90,19 +80,11 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.Source;
-      TextView Source = ViewBindings.findChildViewById(rootView, id);
-      if (Source == null) {
-        break missingId;
-      }
-
       id = R.id.btn_logout;
       ImageView btnLogout = ViewBindings.findChildViewById(rootView, id);
       if (btnLogout == null) {
         break missingId;
       }
-
-      CoordinatorLayout fragmentContainer = (CoordinatorLayout) rootView;
 
       id = R.id.listKeranjang;
       RecyclerView listKeranjang = ViewBindings.findChildViewById(rootView, id);
@@ -122,8 +104,8 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((CoordinatorLayout) rootView, History, Source, btnLogout,
-          fragmentContainer, listKeranjang, menuPaket, onprocess);
+      return new ActivityMainBinding((CoordinatorLayout) rootView, History, btnLogout,
+          listKeranjang, menuPaket, onprocess);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

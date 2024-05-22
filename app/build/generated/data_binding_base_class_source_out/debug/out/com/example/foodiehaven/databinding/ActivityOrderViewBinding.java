@@ -30,15 +30,20 @@ public final class ActivityOrderViewBinding implements ViewBinding {
   public final TextView NoTelepon;
 
   @NonNull
-  public final RecyclerView listItem;
+  public final TextView TglPesan;
+
+  @NonNull
+  public final RecyclerView listItemPesanan;
 
   private ActivityOrderViewBinding(@NonNull RelativeLayout rootView, @NonNull TextView Alamat,
-      @NonNull TextView Nama, @NonNull TextView NoTelepon, @NonNull RecyclerView listItem) {
+      @NonNull TextView Nama, @NonNull TextView NoTelepon, @NonNull TextView TglPesan,
+      @NonNull RecyclerView listItemPesanan) {
     this.rootView = rootView;
     this.Alamat = Alamat;
     this.Nama = Nama;
     this.NoTelepon = NoTelepon;
-    this.listItem = listItem;
+    this.TglPesan = TglPesan;
+    this.listItemPesanan = listItemPesanan;
   }
 
   @Override
@@ -86,14 +91,20 @@ public final class ActivityOrderViewBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.listItem;
-      RecyclerView listItem = ViewBindings.findChildViewById(rootView, id);
-      if (listItem == null) {
+      id = R.id.TglPesan;
+      TextView TglPesan = ViewBindings.findChildViewById(rootView, id);
+      if (TglPesan == null) {
+        break missingId;
+      }
+
+      id = R.id.listItemPesanan;
+      RecyclerView listItemPesanan = ViewBindings.findChildViewById(rootView, id);
+      if (listItemPesanan == null) {
         break missingId;
       }
 
       return new ActivityOrderViewBinding((RelativeLayout) rootView, Alamat, Nama, NoTelepon,
-          listItem);
+          TglPesan, listItemPesanan);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

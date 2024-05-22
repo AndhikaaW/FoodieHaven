@@ -14,4 +14,6 @@ data class Admin (
     var noTelepon: String,
     @ColumnInfo
     var alamatRumah:String,
+    @ColumnInfo
+    var tanggalPesan:String
 )

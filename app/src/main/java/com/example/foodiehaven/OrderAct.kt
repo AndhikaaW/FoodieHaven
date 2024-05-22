@@ -98,8 +98,4 @@ class OrderAct : AppCompatActivity() {
             )
         }
     }
-
-//    fun inputdatapesanan(){
-//
-//    }
 }

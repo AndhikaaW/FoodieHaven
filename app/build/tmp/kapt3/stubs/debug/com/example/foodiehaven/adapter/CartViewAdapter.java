@@ -37,7 +37,7 @@ public final class CartViewAdapter extends androidx.recyclerview.widget.Recycler
     java.util.List<com.example.foodiehaven.database.Menu> list) {
     }
     
-    @kotlin.Metadata(mv = {1, 8, 0}, k = 1, xi = 48, d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\t\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004R\u0011\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u0011\u0010\t\u001a\u00020\n\u00a2\u0006\b\n\u0000\u001a\u0004\b\u000b\u0010\fR\u0011\u0010\r\u001a\u00020\n\u00a2\u0006\b\n\u0000\u001a\u0004\b\u000e\u0010\fR\u0011\u0010\u000f\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0010\u0010\bR\u0011\u0010\u0011\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0012\u0010\b\u00a8\u0006\u0013"}, d2 = {"Lcom/example/foodiehaven/adapter/CartViewAdapter$CartlistViewHolder;", "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;", "view", "Landroid/view/View;", "(Landroid/view/View;)V", "harga", "Landroid/widget/TextView;", "getHarga", "()Landroid/widget/TextView;", "icon_delete", "Landroid/widget/ImageView;", "getIcon_delete", "()Landroid/widget/ImageView;", "icon_plus", "getIcon_plus", "jumlah", "getJumlah", "menu", "getMenu", "app_debug"})
+    @kotlin.Metadata(mv = {1, 8, 0}, k = 1, xi = 48, d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004R\u0011\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u0011\u0010\t\u001a\u00020\n\u00a2\u0006\b\n\u0000\u001a\u0004\b\u000b\u0010\fR\u0011\u0010\r\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\u000e\u0010\bR\u0011\u0010\u000f\u001a\u00020\u0006\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0010\u0010\b\u00a8\u0006\u0011"}, d2 = {"Lcom/example/foodiehaven/adapter/CartViewAdapter$CartlistViewHolder;", "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;", "view", "Landroid/view/View;", "(Landroid/view/View;)V", "harga", "Landroid/widget/TextView;", "getHarga", "()Landroid/widget/TextView;", "icon_delete", "Landroid/widget/ImageView;", "getIcon_delete", "()Landroid/widget/ImageView;", "jumlah", "getJumlah", "menu", "getMenu", "app_debug"})
     public static final class CartlistViewHolder extends androidx.recyclerview.widget.RecyclerView.ViewHolder {
         @org.jetbrains.annotations.NotNull
         private final android.widget.TextView menu = null;
@@ -47,8 +47,6 @@ public final class CartViewAdapter extends androidx.recyclerview.widget.Recycler
         private final android.widget.TextView jumlah = null;
         @org.jetbrains.annotations.NotNull
         private final android.widget.ImageView icon_delete = null;
-        @org.jetbrains.annotations.NotNull
-        private final android.widget.ImageView icon_plus = null;
         
         public CartlistViewHolder(@org.jetbrains.annotations.NotNull
         android.view.View view) {
@@ -74,18 +72,10 @@ public final class CartViewAdapter extends androidx.recyclerview.widget.Recycler
         public final android.widget.ImageView getIcon_delete() {
             return null;
         }
-        
-        @org.jetbrains.annotations.NotNull
-        public final android.widget.ImageView getIcon_plus() {
-            return null;
-        }
     }
     
-    @kotlin.Metadata(mv = {1, 8, 0}, k = 1, xi = 48, d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\bf\u0018\u00002\u00020\u0001J\u0010\u0010\u0002\u001a\u00020\u00032\u0006\u0010\u0004\u001a\u00020\u0005H&J\u0010\u0010\u0006\u001a\u00020\u00032\u0006\u0010\u0004\u001a\u00020\u0005H&\u00a8\u0006\u0007"}, d2 = {"Lcom/example/foodiehaven/adapter/CartViewAdapter$OnAdapterListener;", "", "onDeletecart", "", "cartlist", "Lcom/example/foodiehaven/database/Menu;", "onPluscart", "app_debug"})
+    @kotlin.Metadata(mv = {1, 8, 0}, k = 1, xi = 48, d1 = {"\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\bf\u0018\u00002\u00020\u0001J\u0010\u0010\u0002\u001a\u00020\u00032\u0006\u0010\u0004\u001a\u00020\u0005H&\u00a8\u0006\u0006"}, d2 = {"Lcom/example/foodiehaven/adapter/CartViewAdapter$OnAdapterListener;", "", "onDeletecart", "", "cartlist", "Lcom/example/foodiehaven/database/Menu;", "app_debug"})
     public static abstract interface OnAdapterListener {
-        
-        public abstract void onPluscart(@org.jetbrains.annotations.NotNull
-        com.example.foodiehaven.database.Menu cartlist);
         
         public abstract void onDeletecart(@org.jetbrains.annotations.NotNull
         com.example.foodiehaven.database.Menu cartlist);

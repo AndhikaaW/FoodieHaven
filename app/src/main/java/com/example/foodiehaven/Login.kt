@@ -27,8 +27,8 @@ class Login : AppCompatActivity() {
 
         btnLogin.setOnClickListener {
             if(username.text.isNotEmpty() && password.text.isNotEmpty()){
-                if (username.text.toString() == "y"){
-                    if (password.text.toString() == "y"){
+                if (username.text.toString() == "admin"){
+                    if (password.text.toString() == "admin"){
                         startActivity(Intent(this@Login, MainActivity::class.java))
                     } else{
                         Toast.makeText(this,"Password Salah" , Toast.LENGTH_SHORT).show()

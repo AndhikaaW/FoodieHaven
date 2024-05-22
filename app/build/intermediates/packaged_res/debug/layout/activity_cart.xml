@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             app:boxBackgroundMode="outline"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="10dp">
 
             <EditText
                 android:id="@+id/input_pelanggan"
@@ -41,9 +41,10 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            app:boxBackgroundMode="outline"
-            android:layout_marginBottom="20dp">
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            app:boxBackgroundMode="outline">
 
             <EditText
                 android:id="@+id/input_telepon"
@@ -59,7 +60,9 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
             app:boxBackgroundMode="outline">
 
             <EditText
@@ -72,6 +75,37 @@
                 android:hint="Alamat"/>
 
         </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                app:boxBackgroundMode="outline">
+                <EditText
+                    android:id="@+id/input_tanggal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="datetime"
+                    android:fontFamily="monospace"
+                    android:textSize="12sp"
+                    android:hint="Tanggal Pesanan"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_calendar"
+                android:clickable="true"
+                android:layout_marginTop="7dp"
+                android:id="@+id/btntgl">
+            </ImageView>
+        </LinearLayout>
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
@@ -84,10 +118,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/tombolKirim"
             android:text="Tambah Pesanan"
-            android:layout_marginTop="20dp"
             android:layout_gravity="end"
             android:layout_marginEnd="20dp">
         </Button>
+
     </LinearLayout>
 <!--    <LinearLayout-->
 <!--        android:layout_width="match_parent"-->

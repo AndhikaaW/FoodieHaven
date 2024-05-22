@@ -21,24 +21,24 @@ public final class AdapterCartViewBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final TextView harga;
-
-  @NonNull
   public final ImageView iconDelete;
 
   @NonNull
   public final ImageView iconDone;
 
   @NonNull
-  public final TextView menu;
+  public final TextView notelepon;
 
-  private AdapterCartViewBinding(@NonNull ConstraintLayout rootView, @NonNull TextView harga,
-      @NonNull ImageView iconDelete, @NonNull ImageView iconDone, @NonNull TextView menu) {
+  @NonNull
+  public final TextView pelanggan;
+
+  private AdapterCartViewBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView iconDelete,
+      @NonNull ImageView iconDone, @NonNull TextView notelepon, @NonNull TextView pelanggan) {
     this.rootView = rootView;
-    this.harga = harga;
     this.iconDelete = iconDelete;
     this.iconDone = iconDone;
-    this.menu = menu;
+    this.notelepon = notelepon;
+    this.pelanggan = pelanggan;
   }
 
   @Override
@@ -68,12 +68,6 @@ public final class AdapterCartViewBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.harga;
-      TextView harga = ViewBindings.findChildViewById(rootView, id);
-      if (harga == null) {
-        break missingId;
-      }
-
       id = R.id.icon_delete;
       ImageView iconDelete = ViewBindings.findChildViewById(rootView, id);
       if (iconDelete == null) {
@@ -86,14 +80,20 @@ public final class AdapterCartViewBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.menu;
-      TextView menu = ViewBindings.findChildViewById(rootView, id);
-      if (menu == null) {
+      id = R.id.notelepon;
+      TextView notelepon = ViewBindings.findChildViewById(rootView, id);
+      if (notelepon == null) {
         break missingId;
       }
 
-      return new AdapterCartViewBinding((ConstraintLayout) rootView, harga, iconDelete, iconDone,
-          menu);
+      id = R.id.pelanggan;
+      TextView pelanggan = ViewBindings.findChildViewById(rootView, id);
+      if (pelanggan == null) {
+        break missingId;
+      }
+
+      return new AdapterCartViewBinding((ConstraintLayout) rootView, iconDelete, iconDone,
+          notelepon, pelanggan);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

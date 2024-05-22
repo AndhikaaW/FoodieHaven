@@ -26,7 +26,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/listPilihanMenu"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            tools:listitem="@layout/adapter_list_menu">
 
         </androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>
