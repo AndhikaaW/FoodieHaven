@@ -41,12 +41,12 @@ class Order : AppCompatActivity() {
         recyclerView = findViewById(R.id.listPilihanMenu)
 
         var data = arrayListOf<OrderAdapter.ListMenuMakanan>()
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.nasiboxayam,"Nasi Box Ayam","20000"))
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.nasiboxikan,"Nasi Box Ikan","20000"))
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.nasiboxdaging,"Nasi Box Daging","20000"))
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.nasikuning,"Nasi Kuning","20000"))
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.nasibesek,"Nasi Besek","20000"))
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.nasigeprek,"Nasi Geprek","20000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.nasiboxayam,"Nasi Box Ayam","18000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.nasiboxikan,"Nasi Box Ikan","21000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.nasiboxdaging,"Nasi Box Daging","25000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.nasikuning,"Nasi Kuning","17000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.nasibesek,"Nasi Besek","30000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.nasigeprek,"Nasi Geprek","15000"))
 
         adapter = OrderAdapter(this, data, object : OrderAdapter.OnClickListener {
             override fun onItemClick(position: Int) {
@@ -59,14 +59,14 @@ class Order : AppCompatActivity() {
         recyclerView = findViewById(R.id.listPilihanMenu)
 
         var data = arrayListOf<OrderAdapter.ListMenuMakanan>()
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.nastar,"Nastar","10000"))
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.kastengel,"Kastengel","10000"))
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.sagukeju,"Sagu Keju","10000"))
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.kuesemprit,"Kue Sumprit","10000"))
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.putrisalju,"Putri Salju","10000"))
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.coklatmesses,"Coklat Meses","10000"))
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.coklatmede,"Coklat Mede","10000"))
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.kuekacang,"Kue Kacang","10000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.nastar,"Nastar","70000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.kastengel,"Kastengel","80000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.sagukeju,"Sagu Keju","70000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.kuesemprit,"Kue Sumprit","60000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.putrisalju,"Putri Salju","70000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.coklatmesses,"Coklat Meses","70000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.coklatmede,"Coklat Mede","75000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.kuekacang,"Kue Kacang","60000"))
 
         adapter = OrderAdapter(this,data, object : OrderAdapter.OnClickListener {
             override fun onItemClick(position: Int) {
@@ -79,22 +79,22 @@ class Order : AppCompatActivity() {
         recyclerView = findViewById(R.id.listPilihanMenu)
 
         var data = arrayListOf<OrderAdapter.ListMenuMakanan>()
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.putuayu,"Putu Ayu","5000"))
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.lumpurlapindo,"Lumpur Lapindo","5000"))
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.nagasari,"Nagasari","5000"))
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.bolukukus,"Bolu Kukus","5000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.putuayu,"Putu Ayu","3500"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.lumpurlapindo,"Lumpur Lapindo","3000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.nagasari,"Nagasari","3000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.bolukukus,"Bolu Kukus","3500"))
         data.add(OrderAdapter.ListMenuMakanan(R.drawable.piebuah,"Pie Buah","5000"))
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.kuelumpur,"Kue Lumpur","5000"))
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.risolmayo,"Risol Mayo","5000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.kuelumpur,"Kue Lumpur","3000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.risolmayo,"Risol Mayo","4000"))
         data.add(OrderAdapter.ListMenuMakanan(R.drawable.kue_ku,"Kue Ku","5000"))
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.dadargulung,"Dadar Gulung","5000"))
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.sosissolo,"Sosis Solo","5000"))
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.klepon,"Klepon","5000"))
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.ondeonde,"Onde - Onde","5000"))
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.putrimandi,"Putri Mandi","5000"))
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.kroket,"Kroket","5000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.dadargulung,"Dadar Gulung","4000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.sosissolo,"Sosis Solo","3000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.klepon,"Klepon","3000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.ondeonde,"Onde - Onde","3500"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.putrimandi,"Putri Mandi","4000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.kroket,"Kroket","4000"))
         data.add(OrderAdapter.ListMenuMakanan(R.drawable.rotigulung,"Roti Gulung","5000"))
-        data.add(OrderAdapter.ListMenuMakanan(R.drawable.terangbulan,"Terang Bulan","5000"))
+        data.add(OrderAdapter.ListMenuMakanan(R.drawable.terangbulan,"Terang Bulan","4500"))
 
         adapter = OrderAdapter(this,data, object : OrderAdapter.OnClickListener {
             override fun onItemClick(position: Int) {

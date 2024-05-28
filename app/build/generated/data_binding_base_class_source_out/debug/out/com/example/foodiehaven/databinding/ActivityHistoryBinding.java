@@ -4,25 +4,33 @@ package com.example.foodiehaven.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.foodiehaven.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
+import java.lang.String;
 
 public final class ActivityHistoryBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final RelativeLayout rootView;
 
-  private ActivityHistoryBinding(@NonNull ConstraintLayout rootView) {
+  @NonNull
+  public final RecyclerView recycleViewHistory;
+
+  private ActivityHistoryBinding(@NonNull RelativeLayout rootView,
+      @NonNull RecyclerView recycleViewHistory) {
     this.rootView = rootView;
+    this.recycleViewHistory = recycleViewHistory;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -43,10 +51,19 @@ public final class ActivityHistoryBinding implements ViewBinding {
 
   @NonNull
   public static ActivityHistoryBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    // The body of this method is generated in a way you would not otherwise write.
+    // This is done to optimize the compiled bytecode for size and performance.
+    int id;
+    missingId: {
+      id = R.id.recycleViewHistory;
+      RecyclerView recycleViewHistory = ViewBindings.findChildViewById(rootView, id);
+      if (recycleViewHistory == null) {
+        break missingId;
+      }
 
-    return new ActivityHistoryBinding((ConstraintLayout) rootView);
+      return new ActivityHistoryBinding((RelativeLayout) rootView, recycleViewHistory);
+    }
+    String missingId = rootView.getResources().getResourceName(id);
+    throw new NullPointerException("Missing required view with ID: ".concat(missingId));
   }
 }

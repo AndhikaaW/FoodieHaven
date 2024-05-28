@@ -10,9 +10,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.foodiehaven.R
 import com.example.foodiehaven.database.Customer
+import com.example.foodiehaven.database.ItemCart
 import com.example.foodiehaven.database.Menu
 
-class CustomerAdapter(private val context: Context, private val listpesanan: ArrayList<Menu>): RecyclerView.Adapter<CustomerAdapter.CustomerListViewHolder>(){
+class CustomerAdapter(private val context: Context, private val listpesanan: ArrayList<ItemCart>): RecyclerView.Adapter<CustomerAdapter.CustomerListViewHolder>(){
 
     class CustomerListViewHolder(view: View) : RecyclerView.ViewHolder(view){
         val menuPesanan: TextView = view.findViewById(R.id.menuPesanan)
@@ -34,7 +35,7 @@ class CustomerAdapter(private val context: Context, private val listpesanan: Arr
         holder.hargaPesanan.text = pesananlist.hargamenu
         holder.jumlahPesanan.text = pesananlist.count
     }
-    fun setData(list: List<Menu>){
+    fun setData(list: List<ItemCart>){
         listpesanan.clear()
         listpesanan.addAll(list)
         notifyDataSetChanged()

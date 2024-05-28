@@ -3220,6 +3220,7 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
+id deletePelanggan
 id deltaRelative
 id dependency_ordering
 id design_bottom_sheet
@@ -3295,7 +3296,6 @@ id honorRequest
 id horizontal_only
 id icon
 id icon_delete
-id icon_done
 id icon_group
 id ifRoom
 id ignore
@@ -3321,6 +3321,7 @@ id jumlah
 id jumlahPesanan
 id jumpToEnd
 id jumpToStart
+id kodePesanan
 id labeled
 id layout
 id left
@@ -3403,6 +3404,7 @@ id mtrl_view_tag_bottom_padding
 id multiply
 id namaMenu
 id namaPaket
+id namaPelanggan
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -3451,6 +3453,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recycleViewHistory
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3548,6 +3551,7 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
+id tanggalPesan
 id text
 id text2
 id textEnd
@@ -3728,6 +3732,7 @@ layout activity_order_act
 layout activity_order_view
 layout adapter_cart_view
 layout adapter_customer
+layout adapter_history
 layout adapter_list_cart
 layout adapter_list_menu
 layout adapter_menu

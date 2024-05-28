@@ -12,10 +12,6 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\layout\\activity_order_view.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-mergeDebugResources-36:\\layout\\fragment_history.xml",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\layout\\fragment_history.xml"
-    },
-    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-mergeDebugResources-36:\\layout\\activity_order.xml",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\layout\\activity_order.xml"
     },
@@ -36,12 +32,16 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\layout\\activity_order_act.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-mergeDebugResources-36:\\layout\\adapter_list_menu.xml",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\layout\\adapter_list_menu.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-mergeDebugResources-36:\\layout\\adapter_history.xml",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\layout\\adapter_history.xml"
     },
     {
-        "merged": "com.example.foodiehaven.app-mergeDebugResources-36:/layout/adapter_customer.xml",
-        "source": "com.example.foodiehaven.app-main-39:/layout/adapter_customer.xml"
+        "merged": "com.example.foodiehaven.app-mergeDebugResources-36:/layout/adapter_cart_view.xml",
+        "source": "com.example.foodiehaven.app-main-39:/layout/adapter_cart_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-mergeDebugResources-36:\\layout\\adapter_list_menu.xml",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\layout\\adapter_list_menu.xml"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-mergeDebugResources-36:\\layout\\activity_main.xml",

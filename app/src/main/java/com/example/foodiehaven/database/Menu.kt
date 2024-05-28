@@ -8,13 +8,13 @@ import androidx.room.Index
 
 @Entity
 data class Menu(
-    val id: Int,
+//    val id: Int,
     @PrimaryKey(autoGenerate = true)
-    var menuid: Int,
+    var menuid: Long = 1L,
     @ColumnInfo
     var namamenu: String,
     @ColumnInfo
     var hargamenu: String,
     @ColumnInfo
-    var count: String,
+    var count: String
 )

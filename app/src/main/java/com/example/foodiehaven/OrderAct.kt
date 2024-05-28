@@ -94,7 +94,7 @@ class OrderAct : AppCompatActivity() {
 
         CoroutineScope(Dispatchers.IO).launch {
             AdminApp(this@OrderAct).getAdminDao().addMenu(
-                Menu(1,0,namaMenu.text.toString(),harga.text.toString(),count.toString(),)
+                Menu(0,namaMenu.text.toString(),harga.text.toString(),count.toString())
             )
         }
     }

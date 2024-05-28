@@ -1,4 +1,4 @@
-#Wed May 22 08:38:10 WIB 2024
+#Tue May 28 22:07:29 WIB 2024
 base.0=E\:\\SMT 4\\Proyek TI\\FoodieHaven\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=E\:\\SMT 4\\Proyek TI\\FoodieHaven\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=E\:\\SMT 4\\Proyek TI\\FoodieHaven\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex

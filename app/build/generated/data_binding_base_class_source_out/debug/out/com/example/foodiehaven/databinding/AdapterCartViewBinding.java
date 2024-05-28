@@ -24,19 +24,15 @@ public final class AdapterCartViewBinding implements ViewBinding {
   public final ImageView iconDelete;
 
   @NonNull
-  public final ImageView iconDone;
-
-  @NonNull
   public final TextView notelepon;
 
   @NonNull
   public final TextView pelanggan;
 
   private AdapterCartViewBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView iconDelete,
-      @NonNull ImageView iconDone, @NonNull TextView notelepon, @NonNull TextView pelanggan) {
+      @NonNull TextView notelepon, @NonNull TextView pelanggan) {
     this.rootView = rootView;
     this.iconDelete = iconDelete;
-    this.iconDone = iconDone;
     this.notelepon = notelepon;
     this.pelanggan = pelanggan;
   }
@@ -74,12 +70,6 @@ public final class AdapterCartViewBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.icon_done;
-      ImageView iconDone = ViewBindings.findChildViewById(rootView, id);
-      if (iconDone == null) {
-        break missingId;
-      }
-
       id = R.id.notelepon;
       TextView notelepon = ViewBindings.findChildViewById(rootView, id);
       if (notelepon == null) {
@@ -92,8 +82,8 @@ public final class AdapterCartViewBinding implements ViewBinding {
         break missingId;
       }
 
-      return new AdapterCartViewBinding((ConstraintLayout) rootView, iconDelete, iconDone,
-          notelepon, pelanggan);
+      return new AdapterCartViewBinding((ConstraintLayout) rootView, iconDelete, notelepon,
+          pelanggan);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

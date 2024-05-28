@@ -17,6 +17,7 @@ import com.example.foodiehaven.adapter.CartViewAdapter
 import com.example.foodiehaven.database.Admin
 import com.example.foodiehaven.database.AdminApp
 import com.example.foodiehaven.database.AdminDao
+import com.example.foodiehaven.database.ItemCart
 import com.example.foodiehaven.database.Menu
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -31,6 +32,8 @@ class Cart : AppCompatActivity() {
 
     lateinit var btnKirim: Button
     lateinit var btnTanggal: ImageView
+
+    lateinit var listbarang: List<Menu>
 //    lateinit var harga: TextView
 //    var TotalHargaPesanan = 0
 
@@ -84,6 +87,8 @@ class Cart : AppCompatActivity() {
                     if(alamat.text.isNotEmpty()){
                         if(tglPesan.text.isNotEmpty()){
                             inputData()
+                            getLast()
+
                             startActivity(Intent(this@Cart, MainActivity::class.java))
                         }
                     } else {
@@ -105,6 +110,7 @@ class Cart : AppCompatActivity() {
     fun loadDatamenu(){
         CoroutineScope(Dispatchers.Main).launch {
             val menu = dao.getAllMenu()
+            listbarang = menu
             Log.d("MainActivity", "dbResponse: $menu")
             withContext(Dispatchers.Main) {
                 cartViewAdapter.setData(menu)
@@ -112,6 +118,27 @@ class Cart : AppCompatActivity() {
         }
     }
 
+    fun inputItem(id:Long,menuId:Menu){
+        CoroutineScope(Dispatchers.IO).launch {
+            AdminApp(this@Cart).getAdminDao().addItem(
+                ItemCart(adminid = id, namamenu = menuId.namamenu, hargamenu = menuId.hargamenu, count = menuId.count))
+        }
+    }
+    fun getLast(){
+        var id = 0L
+        CoroutineScope(Dispatchers.IO).launch {
+            id = AdminApp(this@Cart).getAdminDao().getLastTransaksi()
+        }.invokeOnCompletion {
+            listbarang.forEach{
+            inputItem(id,it)
+        }
+            deleteMenu()}
+    }
+    fun deleteMenu(){
+        CoroutineScope(Dispatchers.IO).launch {
+            AdminApp(this@Cart).getAdminDao().deleteAllMenu()
+        }
+    }
     fun inputData(){
         val namaPelanggan = findViewById<TextView>(R.id.input_pelanggan)
         val noTelepon = findViewById<TextView>(R.id.input_telepon)

@@ -4,6 +4,7 @@ package com.example.foodiehaven.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -33,16 +34,25 @@ public final class ActivityOrderViewBinding implements ViewBinding {
   public final TextView TglPesan;
 
   @NonNull
+  public final Button deletePelanggan;
+
+  @NonNull
+  public final TextView kodePesanan;
+
+  @NonNull
   public final RecyclerView listItemPesanan;
 
   private ActivityOrderViewBinding(@NonNull RelativeLayout rootView, @NonNull TextView Alamat,
       @NonNull TextView Nama, @NonNull TextView NoTelepon, @NonNull TextView TglPesan,
+      @NonNull Button deletePelanggan, @NonNull TextView kodePesanan,
       @NonNull RecyclerView listItemPesanan) {
     this.rootView = rootView;
     this.Alamat = Alamat;
     this.Nama = Nama;
     this.NoTelepon = NoTelepon;
     this.TglPesan = TglPesan;
+    this.deletePelanggan = deletePelanggan;
+    this.kodePesanan = kodePesanan;
     this.listItemPesanan = listItemPesanan;
   }
 
@@ -97,6 +107,18 @@ public final class ActivityOrderViewBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.deletePelanggan;
+      Button deletePelanggan = ViewBindings.findChildViewById(rootView, id);
+      if (deletePelanggan == null) {
+        break missingId;
+      }
+
+      id = R.id.kodePesanan;
+      TextView kodePesanan = ViewBindings.findChildViewById(rootView, id);
+      if (kodePesanan == null) {
+        break missingId;
+      }
+
       id = R.id.listItemPesanan;
       RecyclerView listItemPesanan = ViewBindings.findChildViewById(rootView, id);
       if (listItemPesanan == null) {
@@ -104,7 +126,7 @@ public final class ActivityOrderViewBinding implements ViewBinding {
       }
 
       return new ActivityOrderViewBinding((RelativeLayout) rootView, Alamat, Nama, NoTelepon,
-          TglPesan, listItemPesanan);
+          TglPesan, deletePelanggan, kodePesanan, listItemPesanan);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

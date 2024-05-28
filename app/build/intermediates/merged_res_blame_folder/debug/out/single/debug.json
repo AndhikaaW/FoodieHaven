@@ -24,10 +24,6 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\vector1.png"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\mipmap-anydpi-v26\\ic_launcher.xml"
-    },
-    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_sosissolo.jpg.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\sosissolo.jpg"
     },
@@ -36,16 +32,12 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_history.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\history.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_ic_done.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\ic_done.xml"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_coklatmede.jpg.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\coklatmede.jpg"
-    },
-    {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_ic_done.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\ic_done.xml"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_ic_plus.xml.flat",
@@ -60,10 +52,6 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\nasiboxdaging.jpg"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_ic_search.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\ic_search.xml"
-    },
-    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_ondeonde.jpg.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\ondeonde.jpg"
     },
@@ -72,20 +60,16 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\kuesemprit.jpg"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_process.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\process.xml"
-    },
-    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_outline_stroke.xml.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\outline_stroke.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_rotigulung.jpg.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\rotigulung.jpg"
-    },
-    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_ic_cart.xml.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\ic_cart.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_rotigulung.jpg.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\rotigulung.jpg"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_nasiboxikan.jpg.flat",
@@ -116,10 +100,6 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\kroket.jpg"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_coklatkacang.jpg.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\coklatkacang.jpg"
-    },
-    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_kuelumpur.jpg.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\kuelumpur.jpg"
     },
@@ -140,20 +120,8 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\coklatmesses.jpg"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\mipmap-hdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_kuesus.jpg.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\kuesus.jpg"
-    },
-    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_nastar.jpg.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\nastar.jpg"
-    },
-    {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_kuebasah.png.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\kuebasah.png"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\layout_activity_order.xml.flat",
@@ -176,20 +144,12 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\layout\\activity_cart.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_bg_text.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\bg_text.xml"
-    },
-    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\xml_backup_rules.xml.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\xml\\backup_rules.xml"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\layout_adapter_customer.xml.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\layout\\adapter_customer.xml"
-    },
-    {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_nasigeprek.jpg.flat",
@@ -220,6 +180,10 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\ic_minus.xml"
     },
     {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\layout_adapter_history.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\layout\\adapter_history.xml"
+    },
+    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\layout_activity_order_view.xml.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\layout\\activity_order_view.xml"
     },
@@ -244,12 +208,12 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\layout_fragment_history.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\layout\\fragment_history.xml"
-    },
-    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_ic_delete.xml.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\ic_delete.xml"
+    },
+    {
+        "merged": "com.example.foodiehaven.app-merged_res-37:/layout_adapter_cart_view.xml.flat",
+        "source": "com.example.foodiehaven.app-main-39:/layout/adapter_cart_view.xml"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\layout_activity_history.xml.flat",
@@ -262,10 +226,6 @@
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_shopping_cart.png.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\shopping_cart.png"
-    },
-    {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_coklatmesses1.jpg.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\coklatmesses1.jpg"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\layout_adapter_cart_view.xml.flat",
@@ -288,18 +248,6 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\terangbulan.jpg"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_ic_location.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\ic_location.xml"
-    },
-    {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\mipmap-mdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\layout_adapter_list_cart.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\layout\\adapter_list_cart.xml"
-    },
-    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_kuekacang.jpg.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\kuekacang.jpg"
     },
@@ -308,32 +256,20 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\mipmap-xhdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_ic_calendar.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\ic_calendar.xml"
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\layout_adapter_list_cart.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\layout\\adapter_list_cart.xml"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_kastengel.jpg.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\kastengel.jpg"
     },
     {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_ic_calendar.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\ic_calendar.xml"
+    },
+    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_nasiboxayam.jpg.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\nasiboxayam.jpg"
-    },
-    {
-        "merged": "com.example.foodiehaven.app-merged_res-37:/layout_adapter_customer.xml.flat",
-        "source": "com.example.foodiehaven.app-main-39:/layout/adapter_customer.xml"
-    },
-    {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\mipmap-xxhdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_pastel.jpg.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\pastel.jpg"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_bg_rounded.xml.flat",

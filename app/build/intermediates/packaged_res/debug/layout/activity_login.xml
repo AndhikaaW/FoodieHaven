@@ -106,7 +106,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="WELCOME"
+                android:text="SELAMAT DATANG"
                 android:fontFamily="monospace"
                 android:textSize="30dp"
                 android:textStyle="bold"

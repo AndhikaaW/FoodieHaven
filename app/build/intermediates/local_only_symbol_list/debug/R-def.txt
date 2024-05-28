@@ -64,11 +64,11 @@ id btn_login
 id btn_logout
 id btntgl
 id countPaket
+id deletePelanggan
 id harga
 id hargaMenu
 id hargaPesanan
 id icon_delete
-id icon_done
 id imgAdd
 id imgMinus
 id input_alamat
@@ -79,6 +79,7 @@ id input_telepon
 id input_username
 id jumlah
 id jumlahPesanan
+id kodePesanan
 id listHarga
 id listIcon
 id listItemPesanan
@@ -91,11 +92,14 @@ id menuPaket
 id menuPesanan
 id namaMenu
 id namaPaket
+id namaPelanggan
 id notelepon
 id onprocess
 id paketIcon
 id pelanggan
+id recycleViewHistory
 id selected
+id tanggalPesan
 id tombolKirim
 id totalHarga
 layout activity_cart
@@ -107,6 +111,7 @@ layout activity_order_act
 layout activity_order_view
 layout adapter_cart_view
 layout adapter_customer
+layout adapter_history
 layout adapter_list_cart
 layout adapter_list_menu
 layout adapter_menu
