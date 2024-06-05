@@ -3,21 +3,18 @@ package com.example.foodiehaven.database
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import androidx.room.ForeignKey
+import androidx.room.Index
 
 @Entity
-data class Menu (
+data class Menu(
+//    val id: Int,
     @PrimaryKey(autoGenerate = true)
-    var id: Int = 0,
+    var menuid: Long = 0L,
     @ColumnInfo
-    var namaPelanggan: String,
+    var namamenu: String,
     @ColumnInfo
-    var noTelepon: String,
+    var hargamenu: String,
     @ColumnInfo
-    var alamatRumah: String,
-    @ColumnInfo
-    var namaMenu: String,
-    @ColumnInfo
-    var kuantitas: String,
-    @ColumnInfo
-    var biaya: String
-    )
+    var count: String
+)

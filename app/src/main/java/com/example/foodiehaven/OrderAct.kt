@@ -1,17 +1,15 @@
 package com.example.foodiehaven
 
 import android.content.Intent
-import android.icu.number.IntegerWidth
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.cardview.widget.CardView
+import com.example.foodiehaven.database.AdminApp
 import com.example.foodiehaven.database.Menu
-import com.example.foodiehaven.database.MenuApp
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -34,6 +32,8 @@ class OrderAct : AppCompatActivity() {
         btnPesan = findViewById(R.id.btnPesan)
         Count = findViewById(R.id.countPaket)
         totalHarga = findViewById(R.id.totalHarga)
+
+
 
         Plus.setOnClickListener {
             count +=1
@@ -66,20 +66,11 @@ class OrderAct : AppCompatActivity() {
 //        icon.   = Icon
         nama.text = Nama
         harga.text = Harga
-        
         btnPesan.setOnClickListener {
-            val pelanggan = findViewById<TextView>(R.id.input_pelanggan)
-            val telepon = findViewById<TextView>(R.id.input_telepon)
-            val alamat = findViewById<TextView>(R.id.input_alamat)
-            if(pelanggan.text.isNotEmpty() && telepon.text.isNotEmpty() && alamat.text.isNotEmpty()){
-                inputData()
-                val showDialog = AlertDialog.Builder(this)
-                showDialog.setMessage("Success!")
-                startActivity(Intent(this, MainActivity::class.java))
-                finish()
-            } else {
-                Toast.makeText(this,"input tidak boleh kosong" , Toast.LENGTH_SHORT).show()
-            }
+            inputData()
+            Toast.makeText(this, "Ditambahkan ke Keranjang", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
 
     }
@@ -97,15 +88,13 @@ class OrderAct : AppCompatActivity() {
         hargaTotal = intHargaTotal
     }
     fun inputData(){
-        val pelanggan = findViewById<TextView>(R.id.input_pelanggan)
-        val telepon = findViewById<TextView>(R.id.input_telepon)
         val namaMenu = findViewById<TextView>(R.id.namaMenu)
         val harga = findViewById<TextView>(R.id.totalHarga)
-        val alamat = findViewById<TextView>(R.id.input_alamat)
+//        val noPesanan = findViewById<EditText>(R.id.nomorPesanan)
 
         CoroutineScope(Dispatchers.IO).launch {
-            MenuApp(this@OrderAct).getMenuDao().addMenu(
-                Menu(0,pelanggan.text.toString(),telepon.text.toString(),alamat.text.toString(),namaMenu.text.toString(),count.toString(),harga.text.toString())
+            AdminApp(this@OrderAct).getAdminDao().addMenu(
+                Menu(0,namaMenu.text.toString(),harga.text.toString(),count.toString())
             )
         }
     }

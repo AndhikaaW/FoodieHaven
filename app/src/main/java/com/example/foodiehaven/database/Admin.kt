@@ -7,11 +7,13 @@ import androidx.room.PrimaryKey
 @Entity
 data class Admin (
     @PrimaryKey(autoGenerate = true)
-    var id: Int = 0,
+    var adminid: Long=0L,
     @ColumnInfo
-    var email: String,
+    var namaPelanggan: String,
     @ColumnInfo
-    var username: String,
+    var noTelepon: String,
     @ColumnInfo
-    var password: String,
+    var alamatRumah:String,
+    @ColumnInfo
+    var tanggalPesan:String
 )
