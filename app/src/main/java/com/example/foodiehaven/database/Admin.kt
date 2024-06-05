@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 @Entity
 data class Admin (
     @PrimaryKey(autoGenerate = true)
-    var adminid: Long,
+    var adminid: Long=0L,
     @ColumnInfo
     var namaPelanggan: String,
     @ColumnInfo

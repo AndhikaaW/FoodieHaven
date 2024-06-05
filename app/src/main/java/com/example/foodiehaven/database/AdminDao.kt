@@ -60,10 +60,10 @@ interface AdminDao {
     @Query("DELETE FROM ItemCart WHERE adminid = :adminid")
     fun delItem(adminid:Long)
 
-
-
     @Insert
     suspend fun addHistory(historydb: Historydb)
     @Query("SELECT * FROM Historydb ORDER BY id DESC")
     suspend fun getAllHistory(): List<Historydb>
+    @Query("SELECT * FROM Historydb ORDER BY id DESC")
+    fun getHistory(): List<Historydb>
 }

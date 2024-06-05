@@ -3144,6 +3144,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id alamatPelanggan
 id alertTitle
 id aligned
 id all
@@ -3171,6 +3172,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnExport
 id btnPesan
 id btn_login
 id btn_logout
@@ -3417,6 +3419,7 @@ id neverCompleteToEnd
 id neverCompleteToStart
 id noScroll
 id noState
+id noTelpPelanggan
 id none
 id normal
 id north

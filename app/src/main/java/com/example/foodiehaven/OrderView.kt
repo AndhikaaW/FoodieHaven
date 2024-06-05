@@ -86,7 +86,7 @@ class OrderView : AppCompatActivity() {
             startActivity(Intent(this@OrderView, MainActivity::class.java))
             CoroutineScope(Dispatchers.IO).launch {
                 AdminApp(this@OrderView).getAdminDao().addHistory(
-                    Historydb(0,nama.text.toString(),tglPesan.text.toString())
+                    Historydb(0,nama.text.toString(),tglPesan.text.toString(),alamat.text.toString(),noTelepon.text.toString())
                 )
             }
             CoroutineScope(Dispatchers.Main).launch {

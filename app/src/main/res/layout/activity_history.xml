@@ -21,9 +21,17 @@
         </TextView>
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="500dp"
             android:id="@+id/recycleViewHistory"
             tools:listitem="@layout/adapter_history">
         </androidx.recyclerview.widget.RecyclerView>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="export"
+            android:layout_gravity="end"
+            android:id="@+id/btnExport">
+        </Button>
     </LinearLayout>
 </RelativeLayout>

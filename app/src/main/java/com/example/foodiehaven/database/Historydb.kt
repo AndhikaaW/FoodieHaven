@@ -11,5 +11,9 @@ data class Historydb(
     @ColumnInfo
     val namaPelanggan: String,
     @ColumnInfo
-    val tanggalPesan: String
+    val tanggalPesan: String,
+    @ColumnInfo
+    val alamatPelanggan: String,
+    @ColumnInfo
+    val noTelpPelanggan:String
 )

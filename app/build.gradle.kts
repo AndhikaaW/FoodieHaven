@@ -58,4 +58,13 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1")
 
+// Excel parsing library (Apache POI)
+
+    implementation ("org.apache.poi:poi:3.17")
+    implementation ("org.apache.poi:poi-ooxml:3.17")
+
+    implementation ("com.fasterxml:aalto-xml:1.2.2")
+    implementation("javax.xml.stream:stax-api:1.0")
+    implementation("org.apache.xmlbeans:xmlbeans:3.1.0")
+
 }

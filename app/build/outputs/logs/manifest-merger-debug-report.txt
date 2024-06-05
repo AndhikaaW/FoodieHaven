@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:2:1-50:12
-INJECTED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:2:1-50:12
-INJECTED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:2:1-50:12
-INJECTED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:2:1-50:12
+ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:2:1-48:12
 MERGED from [androidx.databinding:viewbinding:8.1.0] C:\Users\User\.gradle\caches\transforms-3\6b519a23cef4063ecfacdf93c283ed13\transformed\viewbinding-8.1.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.room:room-ktx:2.5.2] C:\Users\User\.gradle\caches\transforms-3\64b7eca1fd17e17d24591984b2f161de\transformed\room-ktx-2.5.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.room:room-runtime:2.5.2] C:\Users\User\.gradle\caches\transforms-3\d7a6edb2eaf096739afacceaa13da3eb\transformed\room-runtime-2.5.2\AndroidManifest.xml:17:1-31:12
@@ -62,9 +62,17 @@ MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\User\.g
 		INJECTED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:5:5-81
+	android:name
+		ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:5:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:6:5-80
+	android:name
+		ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:6:22-77
 application
-ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:5:5-48:19
-INJECTED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:5:5-48:19
+ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:8:5-46:19
+INJECTED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:8:5-46:19
 MERGED from [androidx.room:room-runtime:2.5.2] C:\Users\User\.gradle\caches\transforms-3\d7a6edb2eaf096739afacceaa13da3eb\transformed\room-runtime-2.5.2\AndroidManifest.xml:23:5-29:19
 MERGED from [androidx.room:room-runtime:2.5.2] C:\Users\User\.gradle\caches\transforms-3\d7a6edb2eaf096739afacceaa13da3eb\transformed\room-runtime-2.5.2\AndroidManifest.xml:23:5-29:19
 MERGED from [com.google.android.material:material:1.9.0] C:\Users\User\.gradle\caches\transforms-3\31e316c3023d4e4c561c8bb9ff663c4a\transformed\material-1.9.0\AndroidManifest.xml:24:5-20
@@ -88,29 +96,23 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\User\.gradle\cache
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.9.0] C:\Users\User\.gradle\caches\transforms-3\e5cf8c63655e045d6f7a67e3b005ad27\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:10:9-41
+		ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:13:9-41
 	android:fullBackupContent
-		ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:8:9-54
-	android:roundIcon
 		ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:11:9-54
+	android:roundIcon
+		ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:14:9-54
 	tools:targetApi
-		ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:14:9-29
+		ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:17:9-29
 	android:icon
-		ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:9:9-41
+		ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:12:9-41
 	android:allowBackup
-		ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:9:9-35
 	android:theme
-		ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:13:9-49
+		ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:16:9-49
 	android:dataExtractionRules
-		ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:7:9-65
-activity#com.example.foodiehaven.OrderCart
-ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:15:9-17:40
-	android:exported
-		ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:17:13-37
-	android:name
-		ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:16:13-38
+		ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:10:9-65
 activity#com.example.foodiehaven.History
 ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:18:9-20:40
 	android:exported
@@ -163,12 +165,6 @@ ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:42:9-
 		ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:44:13-37
 	android:name
 		ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:43:13-41
-activity#com.example.foodiehaven.SignUp
-ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:45:9-47:40
-	android:exported
-		ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:47:13-37
-	android:name
-		ADDED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml:46:13-35
 uses-sdk
 INJECTED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\SMT 4\Proyek TI\FoodieHaven\app\src\main\AndroidManifest.xml

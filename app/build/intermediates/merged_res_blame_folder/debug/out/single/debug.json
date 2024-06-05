@@ -96,6 +96,10 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\logo.jpg"
     },
     {
+        "merged": "com.example.foodiehaven.app-merged_res-37:/layout_adapter_history.xml.flat",
+        "source": "com.example.foodiehaven.app-main-39:/layout/adapter_history.xml"
+    },
+    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_kroket.jpg.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\kroket.jpg"
     },
@@ -180,12 +184,12 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\ic_minus.xml"
     },
     {
-        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\layout_adapter_history.xml.flat",
-        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\layout\\adapter_history.xml"
-    },
-    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\layout_activity_order_view.xml.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\layout\\activity_order_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\layout_adapter_history.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\layout\\adapter_history.xml"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\layout_activity_order_act.xml.flat",
@@ -210,10 +214,6 @@
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\drawable_ic_delete.xml.flat",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-main-39:\\drawable\\ic_delete.xml"
-    },
-    {
-        "merged": "com.example.foodiehaven.app-merged_res-37:/layout_adapter_cart_view.xml.flat",
-        "source": "com.example.foodiehaven.app-main-39:/layout/adapter_cart_view.xml"
     },
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.0\\com.example.foodiehaven.app-merged_res-37:\\layout_activity_history.xml.flat",

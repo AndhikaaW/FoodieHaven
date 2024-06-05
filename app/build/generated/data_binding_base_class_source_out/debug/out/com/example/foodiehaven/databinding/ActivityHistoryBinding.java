@@ -4,6 +4,7 @@ package com.example.foodiehaven.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,11 +21,15 @@ public final class ActivityHistoryBinding implements ViewBinding {
   private final RelativeLayout rootView;
 
   @NonNull
+  public final Button btnExport;
+
+  @NonNull
   public final RecyclerView recycleViewHistory;
 
-  private ActivityHistoryBinding(@NonNull RelativeLayout rootView,
+  private ActivityHistoryBinding(@NonNull RelativeLayout rootView, @NonNull Button btnExport,
       @NonNull RecyclerView recycleViewHistory) {
     this.rootView = rootView;
+    this.btnExport = btnExport;
     this.recycleViewHistory = recycleViewHistory;
   }
 
@@ -55,13 +60,19 @@ public final class ActivityHistoryBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnExport;
+      Button btnExport = ViewBindings.findChildViewById(rootView, id);
+      if (btnExport == null) {
+        break missingId;
+      }
+
       id = R.id.recycleViewHistory;
       RecyclerView recycleViewHistory = ViewBindings.findChildViewById(rootView, id);
       if (recycleViewHistory == null) {
         break missingId;
       }
 
-      return new ActivityHistoryBinding((RelativeLayout) rootView, recycleViewHistory);
+      return new ActivityHistoryBinding((RelativeLayout) rootView, btnExport, recycleViewHistory);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

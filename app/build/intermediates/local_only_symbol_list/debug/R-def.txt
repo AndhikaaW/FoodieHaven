@@ -59,6 +59,8 @@ id History
 id Nama
 id NoTelepon
 id TglPesan
+id alamatPelanggan
+id btnExport
 id btnPesan
 id btn_login
 id btn_logout
@@ -93,6 +95,7 @@ id menuPesanan
 id namaMenu
 id namaPaket
 id namaPelanggan
+id noTelpPelanggan
 id notelepon
 id onprocess
 id paketIcon

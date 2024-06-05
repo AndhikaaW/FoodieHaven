@@ -15,6 +15,8 @@ class HistoryAdapter(private val context: Context, private val history: ArrayLis
     class HistoryViewHolder(view: View) : RecyclerView.ViewHolder(view){
         val namaPelanggan: TextView = view.findViewById(R.id.namaPelanggan)
         val tanggalPesan: TextView = view.findViewById(R.id.tanggalPesan)
+        val alamatPelanggan: TextView = view.findViewById(R.id.alamatPelanggan)
+        val noTelpPelanggan: TextView = view.findViewById(R.id.noTelpPelanggan)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HistoryViewHolder {
@@ -29,6 +31,8 @@ class HistoryAdapter(private val context: Context, private val history: ArrayLis
         val hist = history[position]
         holder.namaPelanggan.text = hist.namaPelanggan
         holder.tanggalPesan.text = hist.tanggalPesan
+        holder.alamatPelanggan.text = hist.alamatPelanggan
+        holder.noTelpPelanggan.text = hist.noTelpPelanggan
     }
     fun setData(list: List<Historydb>){
         history.clear()

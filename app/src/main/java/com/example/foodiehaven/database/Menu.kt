@@ -10,7 +10,7 @@ import androidx.room.Index
 data class Menu(
 //    val id: Int,
     @PrimaryKey(autoGenerate = true)
-    var menuid: Long = 1L,
+    var menuid: Long = 0L,
     @ColumnInfo
     var namamenu: String,
     @ColumnInfo

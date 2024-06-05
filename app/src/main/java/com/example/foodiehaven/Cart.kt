@@ -145,7 +145,7 @@ class Cart : AppCompatActivity() {
         val alamat = findViewById<TextView>(R.id.input_alamat)
         val tglPesan = findViewById<TextView>(R.id.input_tanggal)
 
-        val admin = Admin(0,namaPelanggan.text.toString(),noTelepon.text.toString(),alamat.text.toString(),tglPesan.text.toString())
+        val admin = Admin(namaPelanggan = namaPelanggan.text.toString(), noTelepon = noTelepon.text.toString(), alamatRumah = alamat.text.toString(), tanggalPesan = tglPesan.text.toString())
         CoroutineScope(Dispatchers.IO).launch {
             AdminApp(this@Cart).getAdminDao().addAdmin(
                 admin
@@ -161,6 +161,7 @@ class Cart : AppCompatActivity() {
                     withContext(Dispatchers.Main) {
                         loadDatamenu()
                     }
+
                 }
             }
 
